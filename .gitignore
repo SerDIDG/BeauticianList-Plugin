@@ -1,0 +1,14 @@
+.DS_Store
+.idea
+.git
+ehthumbs.db
+Thumbs.db
+package-lock.json
+env.json
+_old
+_dev
+_prod
+_stage
+libs
+temp
+node_modules
