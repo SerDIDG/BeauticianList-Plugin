@@ -1,4 +1,5 @@
 .blist__wrapper {
+	@extend .blist__font--initial;
 	width: 100%;
 	height: 100%;
 	position: fixed;
@@ -7,8 +8,49 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: grayscale;
 
 	& * {
 		box-sizing: border-box;
+	}
+
+	dl, dt, dd {
+		@extend .blist__reset--block;
+	}
+
+	form {
+		@extend .blist__reset--block;
+	}
+
+	input, select, textarea, button {
+		@extend .blist__reset--block;
+		@extend .blist__font--initial;
+		width: 100%;
+		outline: none;
+		background-clip: padding-box;
+	}
+
+	h1, h2, h3, h4, h5, h6, p, dl, ul, ol {
+		@extend .blist__font--inherit;
+		margin: 0;
+		padding: 0;
+		@include blist__box;
+	}
+
+	h1 {
+		@extend .blist__font--h1;
+	}
+
+	h2 {
+		@extend .blist__font--h2;
+	}
+
+	img {
+		@extend .blist__reset--block;
+		max-width: 100%;
+		backface-visibility: hidden;
+		transform: translate(0px, 0px);
 	}
 }

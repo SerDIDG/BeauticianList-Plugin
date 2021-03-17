@@ -1,54 +1,47 @@
 .blist__dialog {
-	$self: &;
-	display: flex;
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	visibility: hidden;
-	overflow-x: hidden;
-	overflow-y: auto;
-	-webkit-overflow-scrolling: touch;
+	width: 100%;
+	max-width: var(--blist--dialog-width);
+	position: relative;
+	margin: auto;
+	opacity: 0;
+	background: var(--blist--dialog-background-color);
+	background-clip: padding-box;
+	box-shadow: 0 5px 15px var(--blist--dialog-shadow-color);
+	border-radius: var(--blist--dialog-radius);;
+	transform: scale(0.95);
 	transition: all var(--blist--dialog-duration) ease-in-out;
 
-	&__overlay {
-		position: fixed;
-		z-index: 1;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		background: var(--blist--dialog-overlay-color);
-		opacity: 0;
-		transition: all var(--blist--dialog-duration) ease-in-out;
+	&__inner {
+		padding: var(--blist--dialog-indent);
 	}
 
-	&__popup {
-		width: 100%;
-		max-width: var(--blist--dialog-width);
-		position: relative;
-		z-index: 2;
-		margin: auto;
-		padding: 24px;
-		opacity: 0;
-		background: var(--blist--dialog-background-color);
-		box-shadow: 0 5px 15px var(--blist--dialog-shadow-color);
-		border-radius: 8px;
-		transform: scale(0.95);
-		transition: all var(--blist--dialog-duration) ease-in-out;
+	&__close {
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		z-index: 10;
+		top: 12px;
+		right: 12px;
 	}
 
-	&--show {
-		visibility: visible;
+	&__header {
+		@include blist__box;
+		text-align: center;
 
-		#{ $self }__overlay {
-			opacity: 1;
+		h1 {
+			margin-bottom: var(--blist--indent-half);
 		}
+	}
 
-		#{ $self }__popup {
-			opacity: 1;
-			transform: scale(1);
+	&__logo {
+		img {
+			width: 350px;
+			margin: 0 auto;
 		}
+	}
+
+	&.is-show {
+		opacity: 1;
+		transform: scale(1);
 	}
 }

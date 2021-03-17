@@ -4,44 +4,74 @@ import sass from 'gulp-sass';
 import cleanCSS from 'gulp-clean-css';
 import concat from 'gulp-concat';
 import rename from 'gulp-rename';
+import svgcss from 'gulp-svg-css';
+
+/*** VARIABLES ***/
 
 const paths = {
 	src: 'src',
 	dest: 'dist',
+	temp: 'temp',
 	styles: {
 		src: [
 			'src/scss/variables.scss',
 			'src/scss/common.scss',
+			'src/scss/font.scss',
+			'src/scss/wrapper.scss',
 			'src/scss/**/*.scss',
 		],
-		dest: 'dist/css/'
+		dest: 'dist/css/',
+		srcTemp: [
+			'temp/css/**/*.{css,scss}'
+		],
+		destTemp: 'temp/css/',
+	},
+	images: {
+		svg: 'src/img/svg/**/*.svg',
 	},
 	content: {
 		src: 'src/*.html',
-		dest: 'dist/'
-	}
+		dest: 'dist/',
+	},
 };
 
 /*** CLEAN ***/
 
 export function clean() {
-	return del([paths.dest]);
+	return del([paths.dest, paths.temp]);
 }
 
 /*** STYLES ***/
 
-export function styles() {
+function concatStyles() {
 	return gulp.src(paths.styles.src)
+		.pipe(concat('index.scss'))
+		.pipe(gulp.dest(paths.styles.destTemp));
+}
+
+function concatSvg() {
+	return gulp.src(paths.images.svg)
+		.pipe(svgcss({
+			fileName: 'icons',
+			cssPrefix: 'blist__svg--',
+			addSize: false
+		}))
+		.pipe(gulp.dest(paths.styles.destTemp));
+}
+
+function concatStylesTemp() {
+	return gulp.src(paths.styles.srcTemp)
+		.pipe(concat('index.scss'))
 		.pipe(sass())
-		.pipe(concat('index.css'))
 		.pipe(gulp.dest(paths.styles.dest))
 		.pipe(cleanCSS())
 		.pipe(rename({
-			basename: 'index',
 			suffix: '.min'
 		}))
 		.pipe(gulp.dest(paths.styles.dest));
 }
+
+export const styles = gulp.series(concatStyles, concatSvg, concatStylesTemp);
 
 /*** CONTENT ***/
 
@@ -54,6 +84,7 @@ export function content() {
 
 export function watch() {
 	gulp.watch(paths.content.src, content);
+	gulp.watch(paths.images.svg, styles);
 	gulp.watch(paths.styles.src, styles);
 }
 

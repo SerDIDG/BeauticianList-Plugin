@@ -1,15 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+.blist__svg--close {
+  background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17'%3E  %3Cdefs%3E    %3Cstyle%3E      .cls-1 {        fill: %235e5e5e;        fill-rule: evenodd;      }    %3C/style%3E  %3C/defs%3E  %3Cpath id='close-white.svg' class='cls-1' d='M547.485,220.071l-1.414,1.414L539,214.414l-7.071,7.071-1.414-1.414L537.586,213l-7.071-7.071,1.414-1.414L539,211.586l7.071-7.071,1.414,1.414L540.414,213Z' transform='translate(-530.5 -204.5)'/%3E%3C/svg%3E"); }
+
 :root {
+  --blist--transition-duration: 250ms;
+  --blist--transition-duration-fast: 150ms;
+  --blist--indent-large: 32px;
+  --blist--indent: 24px;
+  --blist--indent-small: 16px;
+  --blist--indent-half: 12px;
+  --blist--color-primary: rgb(0, 0, 0);
+  --blist--color-border: rgb(127, 127, 127);
+  --blist--color-background: rgb(255, 255, 255);
+  --blist--color-opposite: rgb(255, 255, 255);
+  --blist--color-secondary-valuer: 84, 91, 98;
+  --blist--color-secondary: rgb(var(--blist--color-secondary-valuer));
+  --blist--color-secondary-hover: rgb(var(--blist--color-secondary-valuer), 0.9);
+  --blist--color-secondary-bacgkround: rgb(var(--blist--color-secondary-valuer), 0.05);
+  --blist--color-error-value: 212, 53, 53;
+  --blist--color-error: rgb(var(--blist--color-error-value));
+  --blist--color-error-hover: rgb(var(--blist--color-error-value), 0.9);
+  --blist--color-error-bacgkround: rgb(var(--blist--color-error-value), 0.05);
+  --blist--color-accent-value: 135, 65, 153;
+  --blist--color-accent: rgb(var(--blist--color-accent-value));
+  --blist--color-accent-hover: rgb(var(--blist--color-accent-value), 0.9);
+  --blist--color-accent-bacgkround: rgb(var(--blist--color-accent-value), 0.05);
+  --blist--border-color: var(--blist--color-border);
+  --blist--border-radius: 5px;
+  --blist--font--size: 16px;
+  --blist--font--height: 24px;
+  --blist--font--weight: 400;
+  --blist--h1--size: 24px;
+  --blist--h1--height: 32px;
+  --blist--h1--weight: 500;
+  --blist--h2--size: 20px;
+  --blist--h2--height: 28px;
+  --blist--h2--weight: 500;
+  --blist--field-height: 40px;
+  --blist--field-indent: var(--blist--indent-small);
+  --blist--overlay-duration: 500ms;
+  --blist--overlay-color: rgba(0, 0, 0, 0.5);
   --blist--dialog-duration: 500ms;
   --blist--dialog-width: 720px;
-  --blist--dialog-background-color: #ffffff;
-  --blist--dialog-shadow-color: rgba(0,0,0,0.15);
-  --blist--dialog-overlay-color: rgba(0,0,0,0.5); }
+  --blist--dialog-indent: var(--blist--indent-large);
+  --blist--dialog-radius: 8px;
+  --blist--dialog-background-color: var(--blist--color-background);
+  --blist--dialog-shadow-color: rgba(0, 0, 0, 0.15); }
 
 .blist__status--open {
   overflow: hidden; }
 
+.blist__reset--block, .blist__wrapper dl, .blist__wrapper dt, .blist__wrapper dd, .blist__wrapper form, .blist__wrapper input, .blist__wrapper select, .blist__wrapper textarea, .blist__wrapper button, .blist__wrapper img {
+  width: auto;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+  max-width: none;
+  max-height: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  border: none;
+  border-radius: 0; }
+
+.blist__align--left {
+  text-align: left; }
+
+.blist__align--center {
+  text-align: center; }
+
+.blist__align--right {
+  text-align: right; }
+
+/*** BLOCKS ***/
+.blist__box {
+  margin-bottom: var(--blist--indent); }
+  .blist__box:last-child {
+    margin-bottom: 0; }
+
+/*** ICONS ***/
+.blist__svg {
+  display: block;
+  position: relative;
+  background-color: transparent;
+  background-position: 50% 50%;
+  background-repeat: no-repeat; }
+  .blist__svg.initial {
+    background-color: transparent;
+    background-position: 50% 50%;
+    background-repeat: no-repeat; }
+  .blist__svg.is-cover {
+    background-size: cover; }
+  .blist__svg.is-contain {
+    background-size: contain; }
+  .blist__svg.is-fill {
+    background-size: 100% 100%; }
+  .blist__svg.has-hover {
+    cursor: pointer;
+    transition: all var(--blist--transition-duration) ease-in-out; }
+    .blist__svg.has-hover:hover, .blist__svg.has-hover:focus {
+      opacity: 0.8;
+      transition: all var(--blist--transition-duration-fast) ease-in-out; }
+
+.blist__font--initial, .blist__wrapper, .blist__wrapper input, .blist__wrapper select, .blist__wrapper textarea, .blist__wrapper button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--blist--font--size);
+  font-weight: var(--blist--font--weight);
+  font-style: normal;
+  line-height: var(--blist--font--height);
+  letter-spacing: initial;
+  word-spacing: initial;
+  white-space: initial;
+  text-indent: initial;
+  text-transform: initial;
+  color: var(--blist--color-primary); }
+
+.blist__font--inherit, .blist__wrapper h1, .blist__wrapper h2, .blist__wrapper h3, .blist__wrapper h4, .blist__wrapper h5, .blist__wrapper h6, .blist__wrapper p, .blist__wrapper dl, .blist__wrapper ul, .blist__wrapper ol, .blist__input::placeholder {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  white-space: inherit;
+  text-indent: inherit;
+  text-transform: inherit;
+  color: inherit; }
+
+.blist__font--h1, .blist__wrapper h1 {
+  font-size: var(--blist--h1--size);
+  font-weight: var(--blist--h1--weight);
+  line-height: var(--blist--h1--height); }
+
+.blist__font--h2, .blist__wrapper h2 {
+  font-size: var(--blist--h2--size);
+  font-weight: var(--blist--h2--weight);
+  line-height: var(--blist--h2--height); }
+
+.blist__wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  .blist__wrapper * {
+    box-sizing: border-box; }
+  .blist__wrapper input, .blist__wrapper select, .blist__wrapper textarea, .blist__wrapper button {
+    width: 100%;
+    outline: none;
+    background-clip: padding-box; }
+  .blist__wrapper h1, .blist__wrapper h2, .blist__wrapper h3, .blist__wrapper h4, .blist__wrapper h5, .blist__wrapper h6, .blist__wrapper p, .blist__wrapper dl, .blist__wrapper ul, .blist__wrapper ol {
+    margin: 0;
+    padding: 0;
+    margin-bottom: var(--blist--indent); }
+    .blist__wrapper h1:last-child, .blist__wrapper h2:last-child, .blist__wrapper h3:last-child, .blist__wrapper h4:last-child, .blist__wrapper h5:last-child, .blist__wrapper h6:last-child, .blist__wrapper p:last-child, .blist__wrapper dl:last-child, .blist__wrapper ul:last-child, .blist__wrapper ol:last-child {
+      margin-bottom: 0; }
+  .blist__wrapper img {
+    max-width: 100%;
+    backface-visibility: hidden;
+    transform: translate(0px, 0px); }
+
 .blist__dialog {
-  display: flex;
+  width: 100%;
+  max-width: var(--blist--dialog-width);
+  position: relative;
+  margin: auto;
+  opacity: 0;
+  background: var(--blist--dialog-background-color);
+  background-clip: padding-box;
+  box-shadow: 0 5px 15px var(--blist--dialog-shadow-color);
+  border-radius: var(--blist--dialog-radius);
+  transform: scale(0.95);
+  transition: all var(--blist--dialog-duration) ease-in-out; }
+  .blist__dialog__inner {
+    padding: var(--blist--dialog-indent); }
+  .blist__dialog__close {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    z-index: 10;
+    top: 12px;
+    right: 12px; }
+  .blist__dialog__header {
+    margin-bottom: var(--blist--indent);
+    text-align: center; }
+    .blist__dialog__header:last-child {
+      margin-bottom: 0; }
+    .blist__dialog__header h1 {
+      margin-bottom: var(--blist--indent-half); }
+  .blist__dialog__logo img {
+    width: 350px;
+    margin: 0 auto; }
+  .blist__dialog.is-show, .blist__popup.is-show .blist__dialog {
+    opacity: 1;
+    transform: scale(1); }
+
+.blist__form__header {
+  margin-bottom: var(--blist--indent);
+  text-align: center; }
+  .blist__form__header:last-child {
+    margin-bottom: 0; }
+
+/*** FIELD ***/
+.blist__field.blist__field {
+  margin-bottom: var(--blist--field-indent); }
+
+/*** INPUT **/
+.blist__input.blist__input {
+  height: var(--blist--field-height);
+  padding: calc((var(--blist--field-height) - var(--blist--font--height)) / 2) 8px;
+  background: var(--blist--color-background);
+  border: 1px solid var(--blist--border-color);
+  border-radius: var(--blist--border-radius);
+  transition: all var(--blist--transition-duration) ease-in-out; }
+  .blist__input.blist__input::placeholder {
+    color: var(--blist--color-secondary);
+    opacity: 1; }
+  .blist__input.blist__input:focus {
+    border-color: var(--blist--color-accent);
+    box-shadow: 0 0 1px var(--blist--color-accent);
+    transition: all var(--blist--transition-duration-fast) ease-in-out; }
+  .blist__input.blist__input.is-invalid {
+    background: var(--blist--color-error-bacgkround);
+    border-color: var(--blist--color-error);
+    color: var(--blist--color-error); }
+    .blist__input.blist__input.is-invalid:focus {
+      box-shadow: 0 0 1px var(--blist--color-error); }
+
+/*** BUTTON ***/
+.blist__button.blist__button {
+  height: var(--blist--field-height);
+  padding: calc((var(--blist--field-height) - var(--blist--font--height)) / 2) 8px;
+  background: var(--blist--color-accent);
+  border-radius: var(--blist--border-radius);
+  color: var(--blist--color-opposite);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--blist--transition-duration) ease-in-out; }
+  .blist__button.blist__button:hover, .blist__button.blist__button:active, .blist__button.blist__button:focus {
+    background: var(--blist--color-accent);
+    transition: all var(--blist--transition-duration-fast) ease-in-out; }
+  .blist__button.blist__button:active {
+    box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.4); }
+  .blist__button.blist__button--primary {
+    background: var(--blist--color-accent); }
+    .blist__button.blist__button--primary:hover, .blist__button.blist__button--primary:active {
+      background: var(--blist--color-accent-hover); }
+  .blist__button.blist__button--secondary {
+    background: var(--blist--color-secondary); }
+    .blist__button.blist__button--secondary:hover, .blist__button.blist__button--secondary:active {
+      background: var(--blist--color-secondary-hover); }
+
+.blist__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  background: var(--blist--overlay-color);
+  transition: all var(--blist--overlay-duration) ease-in-out; }
+  .blist__overlay.is-show {
+    visibility: visible;
+    opacity: 1; }
+
+.blist__popup {
   position: fixed;
   top: 0;
   right: 0;
@@ -20,45 +284,10 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   transition: all var(--blist--dialog-duration) ease-in-out; }
-  .blist__dialog__overlay {
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: var(--blist--dialog-overlay-color);
-    opacity: 0;
-    transition: all var(--blist--dialog-duration) ease-in-out; }
-  .blist__dialog__popup {
-    width: 100%;
-    max-width: var(--blist--dialog-width);
-    position: relative;
-    z-index: 2;
-    margin: auto;
-    padding: 24px;
-    opacity: 0;
-    background: var(--blist--dialog-background-color);
-    box-shadow: 0 5px 15px var(--blist--dialog-shadow-color);
-    border-radius: 8px;
-    transform: scale(0.95);
-    transition: all var(--blist--dialog-duration) ease-in-out; }
-  .blist__dialog--show {
-    visibility: visible; }
-    .blist__dialog--show .blist__dialog__overlay {
-      opacity: 1; }
-    .blist__dialog--show .blist__dialog__popup {
-      opacity: 1;
-      transform: scale(1); }
-
-.blist__wrapper {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 9999999;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0; }
-  .blist__wrapper * {
-    box-sizing: border-box; }
+  .blist__popup__inner {
+    min-height: 100%;
+    display: flex;
+    padding: var(--blist--indent-small); }
+  .blist__popup.is-show {
+    visibility: visible;
+    opacity: 1; }

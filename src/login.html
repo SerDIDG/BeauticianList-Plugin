@@ -8,10 +8,47 @@
 <body class="blist__status--open">
 
 <div class="blist__wrapper">
-    <div class="blist__dialog blist__dialog--show">
-        <div class="blist__dialog__overlay"></div>
-        <div class="blist__dialog__popup"></div>
+
+    <div class="blist__overlay is-show"></div>
+
+    <div class="blist__popup is-show">
+        <div class="blist__popup__inner">
+            <div class="blist__dialog">
+                <div class="blist__dialog__close blist__svg blist__svg--close has-hover" title="Close"></div>
+
+                <div class="blist__dialog__inner">
+                    <div class="blist__dialog__header">
+                        <h1>License Verification via</h1>
+                        <div class="blist__dialog__logo">
+                            <img src="https://beauty-pro-verify-v2.beauticianlist.com/assets/b-list.png" title="BeauticianList" alt="BeauticianList">
+                        </div>
+                    </div>
+
+                    <div class="blist__dialog__content">
+                        <form class="blist__form blist__form--login">
+                            <div class="blist__form__header">
+                                <h2>Login as Beauty Pro</h2>
+                            </div>
+                            <dl class="blist__field blist__field--vertical">
+                                <dd>
+                                    <input class="blist__input is-required" type="text" placeholder="Email" title="Email">
+                                </dd>
+                            </dl>
+                            <dl class="blist__field blist__field--vertical">
+                                <dd>
+                                    <input class="blist__input is-invalid" type="password" placeholder="Password" title="Password">
+                                </dd>
+                            </dl>
+                            <div class="blist__buttons">
+                                <button class="blist__button blist__button--secondary" type="submit">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
 </div>
 
 </body>

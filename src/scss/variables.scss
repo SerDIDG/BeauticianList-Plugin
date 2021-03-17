@@ -1,7 +1,67 @@
 :root {
+	--blist--transition-duration: 250ms;
+	--blist--transition-duration-fast: 150ms;
+
+	--blist--indent-large: 32px;
+	--blist--indent: 24px;
+	--blist--indent-small: 16px;
+	--blist--indent-half: 12px;
+
+	// *** COLOR ***
+
+	--blist--color-primary: rgb(0, 0, 0);
+	--blist--color-border: rgb(127, 127, 127);
+	--blist--color-background: rgb(255, 255, 255);
+	--blist--color-opposite: rgb(255, 255, 255);
+
+	--blist--color-secondary-valuer: 84, 91, 98;
+	--blist--color-secondary: rgb(var(--blist--color-secondary-valuer));
+	--blist--color-secondary-hover: rgb(var(--blist--color-secondary-valuer), 0.9);
+	--blist--color-secondary-bacgkround: rgb(var(--blist--color-secondary-valuer), 0.05);
+
+	--blist--color-error-value: 212, 53, 53;
+	--blist--color-error: rgb(var(--blist--color-error-value));
+	--blist--color-error-hover: rgb(var(--blist--color-error-value), 0.9);
+	--blist--color-error-bacgkround: rgb(var(--blist--color-error-value), 0.05);
+
+	--blist--color-accent-value: 135, 65, 153;
+	--blist--color-accent: rgb(var(--blist--color-accent-value));
+	--blist--color-accent-hover: rgb(var(--blist--color-accent-value), 0.9);
+	--blist--color-accent-bacgkround: rgb(var(--blist--color-accent-value), 0.05);
+
+	// *** BORDER ***
+
+	--blist--border-color: var(--blist--color-border);
+	--blist--border-radius: 5px;
+
+	// *** FONT ***
+
+	--blist--font--size: 16px;
+	--blist--font--height: 24px;
+	--blist--font--weight: 400;
+	--blist--h1--size: 24px;
+	--blist--h1--height: 32px;
+	--blist--h1--weight: 500;
+	--blist--h2--size: 20px;
+	--blist--h2--height: 28px;
+	--blist--h2--weight: 500;
+
+	// *** FIELD ***
+
+	--blist--field-height: 40px;
+	--blist--field-indent: var(--blist--indent-small);
+
+	// *** OVERLAY ***
+
+	--blist--overlay-duration: 500ms;
+	--blist--overlay-color: rgba(0, 0, 0, 0.5);
+
+	// *** DIALOG ***
+
 	--blist--dialog-duration: 500ms;
 	--blist--dialog-width: 720px;
-	--blist--dialog-background-color: #ffffff;
-	--blist--dialog-shadow-color: rgba(0,0,0,0.15);
-	--blist--dialog-overlay-color: rgba(0,0,0,0.5);
+	--blist--dialog-indent: var(--blist--indent-large);
+	--blist--dialog-radius: 8px;
+	--blist--dialog-background-color: var(--blist--color-background);
+	--blist--dialog-shadow-color: rgba(0, 0, 0, 0.15);
 }

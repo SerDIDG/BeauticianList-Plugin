@@ -1,5 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
 .blist__status {
 	&--open {
 		overflow: hidden;
+	}
+}
+
+.blist__reset {
+	&--block {
+		width: auto;
+		height: auto;
+		min-width: 0;
+		min-height: 0;
+		max-width: none;
+		max-height: none;
+		display: block;
+		padding: 0;
+		margin: 0;
+		box-shadow: none;
+		border: none;
+		border-radius: 0;
+	}
+}
+
+.blist__align {
+	&--left {
+		text-align: left
+	}
+
+	&--center {
+		text-align: center;
+	}
+
+	&--right {
+		text-align: right;
+	}
+}
+
+/*** BLOCKS ***/
+
+@mixin blist__box {
+	margin-bottom: var(--blist--indent);
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.blist__box {
+	@include blist__box;
+}
+
+/*** ICONS ***/
+
+.blist__svg {
+	display: block;
+	position: relative;
+	background-color: transparent;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+
+	&.initial {
+		background-color: transparent;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+	}
+
+	&.is-cover {
+		background-size: cover;
+	}
+
+	&.is-contain {
+		background-size: contain;
+	}
+
+	&.is-fill {
+		background-size: 100% 100%;
+	}
+
+	&.has-hover {
+		cursor: pointer;
+		transition: all var(--blist--transition-duration) ease-in-out;
+
+		&:hover,
+		&:focus {
+			opacity: 0.8;
+			transition: all var(--blist--transition-duration-fast) ease-in-out;
+		}
 	}
 }

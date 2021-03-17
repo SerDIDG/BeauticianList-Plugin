@@ -1,0 +1,99 @@
+.blist__form {
+	&__header {
+		@include blist__box;
+		text-align: center;
+	}
+}
+
+/*** FIELD ***/
+
+@mixin blist__field {
+	margin-bottom: var(--blist--field-indent);
+}
+
+.blist__field.blist__field {
+	@include blist__field;
+}
+
+/*** INPUT **/
+
+@mixin blist__input {
+	height: var(--blist--field-height);
+	padding: calc((var(--blist--field-height) - var(--blist--font--height)) / 2) 8px;
+	background: var(--blist--color-background);
+	border: 1px solid var(--blist--border-color);
+	border-radius: var(--blist--border-radius);
+	transition: all var(--blist--transition-duration) ease-in-out;
+
+	&::placeholder {
+		@extend .blist__font--inherit;
+		color: var(--blist--color-secondary);
+		opacity: 1;
+	}
+
+	&:focus {
+		border-color: var(--blist--color-accent);
+		box-shadow: 0 0 1px var(--blist--color-accent);
+		transition: all var(--blist--transition-duration-fast) ease-in-out;
+	}
+
+	&.is-invalid {
+		background: var(--blist--color-error-bacgkround);
+		border-color: var(--blist--color-error);
+		color: var(--blist--color-error);
+
+		&:focus {
+			box-shadow: 0 0 1px var(--blist--color-error);
+		}
+	}
+}
+
+.blist__input.blist__input {
+	@include blist__input;
+}
+
+/*** BUTTON ***/
+
+@mixin blist__button {
+	height: var(--blist--field-height);
+	padding: calc((var(--blist--field-height) - var(--blist--font--height)) / 2) 8px;
+	background: var(--blist--color-accent);
+	border-radius: var(--blist--border-radius);
+	color: var(--blist--color-opposite);
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: all var(--blist--transition-duration) ease-in-out;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background: var(--blist--color-accent);
+		transition: all var(--blist--transition-duration-fast) ease-in-out;
+	}
+
+	&:active {
+		box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.4);
+	}
+
+	&--primary {
+		background: var(--blist--color-accent);
+
+		&:hover,
+		&:active {
+			background: var(--blist--color-accent-hover);
+		}
+	}
+
+	&--secondary {
+		background: var(--blist--color-secondary);
+
+		&:hover,
+		&:active {
+			background: var(--blist--color-secondary-hover);
+		}
+	}
+}
+
+.blist__button.blist__button {
+	@include blist__button;
+}

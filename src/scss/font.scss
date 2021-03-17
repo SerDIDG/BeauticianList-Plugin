@@ -1,0 +1,41 @@
+.blist__font {
+	&--initial {
+		font-family: 'Montserrat', sans-serif;
+		font-size: var(--blist--font--size);
+		font-weight: var(--blist--font--weight);
+		font-style: normal;
+		line-height: var(--blist--font--height);
+		letter-spacing: initial;
+		word-spacing: initial;
+		white-space: initial;
+		text-indent: initial;
+		text-transform: initial;
+		color: var(--blist--color-primary);
+	}
+
+	&--inherit {
+		font-family: inherit;
+		font-size: inherit;
+		font-weight: inherit;
+		font-style: inherit;
+		line-height: inherit;
+		letter-spacing: inherit;
+		word-spacing: inherit;
+		white-space: inherit;
+		text-indent: inherit;
+		text-transform: inherit;
+		color: inherit;
+	}
+
+	&--h1 {
+		font-size: var(--blist--h1--size);
+		font-weight: var(--blist--h1--weight);
+		line-height: var(--blist--h1--height);
+	}
+
+	&--h2 {
+		font-size: var(--blist--h2--size);
+		font-weight: var(--blist--h2--weight);
+		line-height: var(--blist--h2--height);
+	}
+}
