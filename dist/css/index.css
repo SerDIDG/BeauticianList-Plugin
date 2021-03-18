@@ -26,11 +26,11 @@
   --blist--color-background: rgb(255, 255, 255);
   --blist--color-opposite: rgb(255, 255, 255);
   --blist--color-separator: rgb(229, 229, 229);
-  --blist--color-secondary-valuer: 108, 117, 125;
-  --blist--color-secondary: rgb(var(--blist--color-secondary-valuer));
-  --blist--color-secondary-hover: rgb(var(--blist--color-secondary-valuer), 0.9);
-  --blist--color-secondary-bacgkround: rgb(var(--blist--color-secondary-valuer), 0.05);
-  --blist--color-secondary-border: rgb(var(--blist--color-secondary-valuer), 0.25);
+  --blist--color-secondary-value: 108, 117, 125;
+  --blist--color-secondary: rgb(var(--blist--color-secondary-value));
+  --blist--color-secondary-hover: rgb(var(--blist--color-secondary-value), 0.9);
+  --blist--color-secondary-bacgkround: rgb(var(--blist--color-secondary-value), 0.05);
+  --blist--color-secondary-border: rgb(var(--blist--color-secondary-value), 0.25);
   --blist--color-error-value: 212, 53, 53;
   --blist--color-error: rgb(var(--blist--color-error-value));
   --blist--color-error-hover: rgb(var(--blist--color-error-value), 0.9);
@@ -40,7 +40,7 @@
   --blist--color-accent: rgb(var(--blist--color-accent-value));
   --blist--color-accent-hover: rgb(var(--blist--color-accent-value), 0.9);
   --blist--color-accent-bacgkround: rgb(var(--blist--color-accent-value), 0.05);
-  --blist--color-accent-border: rgb(var(--blist--color-accent-value-valuer), 0.25);
+  --blist--color-accent-border: rgb(var(--blist--color-accent-value-value), 0.25);
   --blist--border-color: var(--blist--color-border);
   --blist--border-radius: 5px;
   --blist--bold--weight: 600;
