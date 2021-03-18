@@ -1,0 +1,36 @@
+@media only screen and (min-width: $screen-mobile + 1) {
+	.blist__dialog {
+		&__links {
+			ul {
+				flex-direction: row;
+
+				li {
+					display: flex;
+					white-space: nowrap;
+
+					&:not(:last-child):after {
+						display: block;
+						margin: 0 4px;
+						content: '・';
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: $screen-mobile) {
+	.blist__popup {
+		&__inner {
+			padding: 0;
+		}
+	}
+
+	.blist__dialog {
+		&__links {
+			ul {
+				flex-direction: column;
+			}
+		}
+	}
+}

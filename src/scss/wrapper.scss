@@ -20,6 +20,17 @@
 		@extend .blist__reset--block;
 	}
 
+	ul, ol, li {
+		@extend .blist__reset--block;
+		list-style: none;
+	}
+
+	hr {
+		@extend .blist__reset--block;
+		@include box;
+		border-top: 1px solid var(--blist--border-color);
+	}
+
 	form {
 		@extend .blist__reset--block;
 	}
@@ -36,7 +47,7 @@
 		@extend .blist__font--inherit;
 		margin: 0;
 		padding: 0;
-		@include blist__box;
+		@include box;
 	}
 
 	h1 {
@@ -45,6 +56,19 @@
 
 	h2 {
 		@extend .blist__font--h2;
+	}
+
+	a {
+		@extend .blist__font--inherit;
+		@extend .blist__font--a;
+		text-decoration: none;
+		cursor: pointer;
+
+		&:hover,
+		&:focus,
+		&:active {
+			text-decoration: underline;
+		}
 	}
 
 	img {

@@ -9,8 +9,38 @@
 	background: var(--blist--overlay-color);
 	transition: all var(--blist--overlay-duration) ease-in-out;
 
+	&__spinner {
+		width: var(--blist--overlay--spinner-size);
+		height: var(--blist--overlay--spinner-size);
+		margin: auto;
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		border: 3px solid var(--blist--color-separator);
+		border-top-color: var(--blist--color-accent);
+		border-radius: 50%;
+		animation: blist__spinner 2s linear infinite;
+	}
+
+	&.is-hide {
+		visibility: hidden;
+		opacity: 0;
+	}
+
 	&.is-show {
 		visibility: visible;
 		opacity: 1;
+	}
+}
+
+@keyframes blist__spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
 	}
 }

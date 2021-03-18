@@ -9,7 +9,9 @@
 		word-spacing: initial;
 		white-space: initial;
 		text-indent: initial;
-		text-transform: initial;
+		text-transform: none;
+		text-shadow: none;
+		text-decoration: none;
 		color: var(--blist--color-primary);
 	}
 
@@ -24,7 +26,15 @@
 		white-space: inherit;
 		text-indent: inherit;
 		text-transform: inherit;
+		text-shadow: inherit;
+		text-decoration: inherit;
 		color: inherit;
+	}
+
+	&--hint {
+		font-size: var(--blist--hint--size);
+		font-weight: var(--blist--hint--weight);
+		line-height: var(--blist--hint--height);
 	}
 
 	&--h1 {
@@ -37,5 +47,10 @@
 		font-size: var(--blist--h2--size);
 		font-weight: var(--blist--h2--weight);
 		line-height: var(--blist--h2--height);
+	}
+
+	&--a {
+		font-weight: var(--blist--a--weight);
+		color: var(--blist--a--color);
 	}
 }

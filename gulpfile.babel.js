@@ -8,6 +8,7 @@ import svgcss from 'gulp-svg-css';
 
 /*** VARIABLES ***/
 
+const prefix = 'blist';
 const paths = {
 	src: 'src',
 	dest: 'dist',
@@ -19,6 +20,8 @@ const paths = {
 			'src/scss/font.scss',
 			'src/scss/wrapper.scss',
 			'src/scss/**/*.scss',
+			'!src/scss/adaptive.scss',
+			'src/scss/adaptive.scss',
 		],
 		dest: 'dist/css/',
 		srcTemp: [
@@ -28,6 +31,7 @@ const paths = {
 	},
 	images: {
 		svg: 'src/img/svg/**/*.svg',
+		svgBorder: 'src/img/border/**/*.svg',
 	},
 	content: {
 		src: 'src/*.html',
@@ -53,7 +57,19 @@ function concatSvg() {
 	return gulp.src(paths.images.svg)
 		.pipe(svgcss({
 			fileName: 'icons',
-			cssPrefix: 'blist__svg--',
+			cssPrefix: `${prefix}__svg--`,
+			cssProperty: 'background-image',
+			addSize: false
+		}))
+		.pipe(gulp.dest(paths.styles.destTemp));
+}
+
+function concatSvgBorder() {
+	return gulp.src(paths.images.svgBorder)
+		.pipe(svgcss({
+			fileName: 'borders',
+			cssPrefix: `${prefix}__svg-border--`,
+			cssProperty: 'border-image-source',
 			addSize: false
 		}))
 		.pipe(gulp.dest(paths.styles.destTemp));
@@ -71,7 +87,7 @@ function concatStylesTemp() {
 		.pipe(gulp.dest(paths.styles.dest));
 }
 
-export const styles = gulp.series(concatStyles, concatSvg, concatStylesTemp);
+export const styles = gulp.series(concatStyles, concatSvg, concatSvgBorder, concatStylesTemp);
 
 /*** CONTENT ***/
 

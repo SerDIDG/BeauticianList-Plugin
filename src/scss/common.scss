@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 
 .blist__status {
 	&--open {
@@ -20,6 +20,11 @@
 		box-shadow: none;
 		border: none;
 		border-radius: 0;
+
+		&:before,
+		&:after {
+			display: none;
+		}
 	}
 }
 
@@ -39,7 +44,29 @@
 
 /*** BLOCKS ***/
 
-@mixin blist__box {
+@mixin border--dashed($theme: dark) {
+	position: absolute;
+	z-index: -1;
+	top: 4px;
+	right: 4px;
+	bottom: 4px;
+	left: 4px;
+	display: block;
+	border-width: 3px;
+	border-style: solid;
+	border-image-width: 16px;
+	border-image-slice: 16;
+	border-image-repeat: round;
+	content: '';
+
+	@if $theme == dark {
+		@extend .blist__svg-border--dashed-dark;
+	} @else {
+		@extend .blist__svg-border--dashed-white;
+	}
+}
+
+@mixin box {
 	margin-bottom: var(--blist--indent);
 
 	&:last-child {
@@ -48,7 +75,33 @@
 }
 
 .blist__box {
-	@include blist__box;
+	@include box;
+}
+
+@mixin hr {
+	&--dashed {
+		@extend .blist__svg--separator;
+		margin: var(--blist--indent) auto;
+		height: 3px;
+		background-repeat: repeat-x;
+		border: none;
+		border-radius: 3px;
+		background-position: 50% 0;
+	}
+
+	&.is-small {
+		width: 56px;
+		background-position: 8px 0;
+	}
+
+	&.is-medium {
+		width: 140px;
+		background-position: 8px 0;
+	}
+}
+
+.blist__hr.blist__hr {
+	@include hr;
 }
 
 /*** ICONS ***/
