@@ -16,6 +16,13 @@
 		box-sizing: border-box;
 	}
 
+	img {
+		@extend .blist__reset--block;
+		max-width: 100%;
+		backface-visibility: hidden;
+		transform: translate(0px, 0px);
+	}
+
 	dl, dt, dd {
 		@extend .blist__reset--block;
 	}
@@ -71,10 +78,7 @@
 		}
 	}
 
-	img {
-		@extend .blist__reset--block;
-		max-width: 100%;
-		backface-visibility: hidden;
-		transform: translate(0px, 0px);
+	b, strong {
+		font-weight: var(--blist--bold--weight);
 	}
 }

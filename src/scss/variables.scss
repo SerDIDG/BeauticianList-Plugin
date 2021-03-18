@@ -8,6 +8,7 @@ $screen-mobile: 640px;
 	--blist--indent: 24px;
 	--blist--indent-small: 16px;
 	--blist--indent-half: 12px;
+	--blist--indent-quarter: 6px;
 
 	--blist--shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 
@@ -44,6 +45,8 @@ $screen-mobile: 640px;
 
 	// *** FONT ***
 
+	--blist--bold--weight: 600;
+
 	--blist--font--size: 16px;
 	--blist--font--height: 24px;
 	--blist--font--weight: 400;
@@ -61,14 +64,24 @@ $screen-mobile: 640px;
 
 	// *** BUTTON ***
 
-	--blist--button--weight: 500;
-	--blist--button--color: var(--blist--color-opposite);
-	--blist--button--active-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.4);
+	--blist--button-width: 128px;
+	--blist--button-height: var(--blist--field-height);
+	--blist--button-padding: var(--blist--indent-small);
+	--blist--button-weight: 500;
+	--blist--button-color: var(--blist--color-opposite);
+	--blist--button-active-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.4);
+	--blist--button--large-width: 256px;
+	--blist--button--large-height: var(--blist--field--large-height);
+	--blist--button--large-padding: var(--blist--indent-large);
 
 	// *** FIELD ***
 
 	--blist--field-height: 40px;
+	--blist--field-height-max: 500px;
+	--blist--field-height-textarea: 100px;
+	--blist--field-padding: 8px;
 	--blist--field-indent: var(--blist--indent-small);
+	--blist--field--large-height: 50px;
 
 	// *** OVERLAY ***
 

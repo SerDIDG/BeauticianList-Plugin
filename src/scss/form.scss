@@ -1,4 +1,6 @@
 .blist__form {
+	$self: &;
+
 	&__header,
 	&__notification,
 	&__content,
@@ -28,6 +30,12 @@
 			display: none;
 		}
 	}
+
+	&--intro {
+		#{$self}__content {
+			text-align: center;
+		}
+	}
 }
 
 /*** FIELD ***/
@@ -44,11 +52,11 @@
 
 @mixin input {
 	height: var(--blist--field-height);
-	padding: calc((var(--blist--field-height) - var(--blist--font--height)) / 2) 8px;
+	padding: calc((var(--blist--field-height) - var(--blist--font--height)) / 2) var(--blist--field-padding);
 	background: var(--blist--color-background);
 	border: 1px solid var(--blist--border-color);
 	border-radius: var(--blist--border-radius);
-	transition: all var(--blist--transition-duration) ease-in-out;
+	transition: all var(--blist--transition-duration) ease-in-out, height none;
 
 	&::placeholder {
 		@extend .blist__font--inherit;
@@ -59,13 +67,14 @@
 	&:hover,
 	&:active {
 		background: var(--blist--color-secondary-bacgkround);
+		transition: all var(--blist--transition-duration-fast) ease-in-out, height none;
 	}
 
 	&:focus {
 		background: var(--blist--color-secondary-bacgkround);
 		border-color: var(--blist--color-accent);
 		box-shadow: 0 0 1px var(--blist--color-accent);
-		transition: all var(--blist--transition-duration-fast) ease-in-out;
+		transition: all var(--blist--transition-duration-fast) ease-in-out, height none;
 	}
 
 	&.is-invalid {
@@ -78,20 +87,35 @@
 	}
 }
 
+@mixin textarea {
+	height: var(--blist--field-height-textarea);
+	min-height: var(--blist--field-height);
+	max-height: var(--blist--field-height-max);
+	overflow: auto;
+	resize: vertical;
+}
+
 .blist__input.blist__input {
 	@include input;
+
+	&--textarea {
+		@include textarea;
+	}
 }
 
 /*** BUTTON ***/
 
 @mixin button {
-	height: var(--blist--field-height);
-	padding: calc((var(--blist--field-height) - var(--blist--font--height)) / 2) 8px;
+	min-width: var(--blist--button-width);
+	max-width: 100%;
+	height: var(--blist--button-height);
+	padding: calc((var(--blist--button-height) - var(--blist--font--height)) / 2) var(--blist--button-padding);
 	background: var(--blist--color-accent);
 	border-radius: var(--blist--border-radius);
-	color: var(--blist--button--color);
-	font-weight: var(--blist--button--weight);
+	color: var(--blist--button-color);
+	font-weight: var(--blist--button-weight);
 	text-transform: uppercase;
+	text-decoration: none;
 	cursor: pointer;
 	transition: all var(--blist--transition-duration) ease-in-out;
 
@@ -99,11 +123,12 @@
 	&:active,
 	&:focus {
 		background: var(--blist--color-accent);
+		text-decoration: none;
 		transition: all var(--blist--transition-duration-fast) ease-in-out;
 	}
 
 	&:active {
-		box-shadow: var(--blist--button--active-shadow);
+		box-shadow: var(--blist--button-active-shadow);
 	}
 
 	&--primary {
@@ -122,6 +147,12 @@
 		&:active {
 			background: var(--blist--color-secondary-hover);
 		}
+	}
+
+	&.is-large {
+		--blist--button-width: var(--blist--button--large-width);
+		--blist--button-height: var(--blist--button--large-height);
+		--blist--button-padding: var(--blist--button--large-padding);
 	}
 }
 

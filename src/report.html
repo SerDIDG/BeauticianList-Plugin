@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
+    <title>Report a problem</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body class="blist__status--open">
@@ -26,24 +26,28 @@
                     </div>
 
                     <div class="blist__dialog__content">
-                        <form class="blist__form blist__form--login">
+                        <form class="blist__form blist__form--report">
                             <div class="blist__form__header">
-                                <h2>Login as Beauty Pro</h2>
+                                <h2>Report a problem</h2>
                             </div>
-                            <div class="blist__form__notification is-danger">The email and/or password you entered is incorrect. Please verify and re-enter. If you need help resetting your password, please click "Forgot Password" link below.</div>
                             <div class="blist__form__content">
                                 <dl class="blist__field blist__field--vertical">
                                     <dd>
-                                        <input class="blist__input is-required" type="text" name="email" placeholder="Email" title="Email">
+                                        <input class="blist__input is-required" type="text" name="name" autocomplete="off" placeholder="Your email" title="Your name">
                                     </dd>
                                 </dl>
                                 <dl class="blist__field blist__field--vertical">
                                     <dd>
-                                        <input class="blist__input is-invalid" type="password" name="password" placeholder="Password" title="Password">
+                                        <input class="blist__input is-required" type="text" name="email" autocomplete="off" placeholder="Your email" title="Your email">
+                                    </dd>
+                                </dl>
+                                <dl class="blist__field blist__field--vertical">
+                                    <dd>
+                                        <textarea class="blist__input blist__input--textarea is-required" type="text" name="message" autocomplete="off" placeholder="Comments / Notes" title="Comments / Notes"></textarea>
                                     </dd>
                                 </dl>
                                 <div class="blist__buttons">
-                                    <button class="blist__button blist__button--primary" type="submit">Login</button>
+                                    <button class="blist__button blist__button--primary" type="submit">Send message</button>
                                 </div>
                             </div>
                         </form>
@@ -54,21 +58,14 @@
                         <div class="blist__dialog__links blist__dialog__links--horizontal">
                             <ul>
                                 <li>
-                                    <a>Forgot Password</a>
+                                    <a>Sign In</a>
                                 </li>
                                 <li>
                                     <a>Create Account</a>
                                 </li>
-                                <li>
-                                    <a>Report a Problem</a>
-                                </li>
                             </ul>
                         </div>
                     </div>
-                </div>
-
-                <div class="blist__overlay is-show">
-                    <div class="blist__overlay__spinner"></div>
                 </div>
             </div>
         </div>
