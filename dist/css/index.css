@@ -26,21 +26,27 @@
   --blist--color-background: rgb(255, 255, 255);
   --blist--color-opposite: rgb(255, 255, 255);
   --blist--color-separator: rgb(229, 229, 229);
+  --blist--color-accent-value: 135, 65, 153;
+  --blist--color-accent: rgb(var(--blist--color-accent-value));
+  --blist--color-accent-hover: rgb(var(--blist--color-accent-value), 0.9);
+  --blist--color-accent-bacgkround: rgb(var(--blist--color-accent-value), 0.05);
+  --blist--color-accent-border: rgb(var(--blist--color-accent-value), 0.25);
   --blist--color-secondary-value: 108, 117, 125;
   --blist--color-secondary: rgb(var(--blist--color-secondary-value));
   --blist--color-secondary-hover: rgb(var(--blist--color-secondary-value), 0.9);
   --blist--color-secondary-bacgkround: rgb(var(--blist--color-secondary-value), 0.05);
   --blist--color-secondary-border: rgb(var(--blist--color-secondary-value), 0.25);
-  --blist--color-error-value: 212, 53, 53;
-  --blist--color-error: rgb(var(--blist--color-error-value));
-  --blist--color-error-hover: rgb(var(--blist--color-error-value), 0.9);
-  --blist--color-error-bacgkround: rgb(var(--blist--color-error-value), 0.05);
-  --blist--color-error-border: rgb(var(--blist--color-error-value), 0.25);
-  --blist--color-accent-value: 135, 65, 153;
-  --blist--color-accent: rgb(var(--blist--color-accent-value));
-  --blist--color-accent-hover: rgb(var(--blist--color-accent-value), 0.9);
-  --blist--color-accent-bacgkround: rgb(var(--blist--color-accent-value), 0.05);
-  --blist--color-accent-border: rgb(var(--blist--color-accent-value-value), 0.25);
+  --blist--color-danger-value: 212, 53, 53;
+  --blist--color-danger: rgb(var(--blist--color-danger-value));
+  --blist--color-danger-hover: rgb(var(--blist--color-danger-value), 0.9);
+  --blist--color-danger-bacgkround: rgb(var(--blist--color-danger-value), 0.05);
+  --blist--color-danger-border: rgb(var(--blist--color-danger-value), 0.25);
+  --blist--color-warning-value: 224, 157, 40;
+  --blist--color-warning: rgb(var(--blist--color-warning-value));
+  --blist--color-warning-bacgkround: rgb(var(--blist--color-warning-value), 0.05);
+  --blist--color-success-value: 37, 176, 37;
+  --blist--color-success: rgb(var(--blist--color-success-value));
+  --blist--color-success-bacgkround: rgb(var(--blist--color-success-value), 0.05);
   --blist--border-color: var(--blist--color-border);
   --blist--border-radius: 5px;
   --blist--bold--weight: 600;
@@ -50,6 +56,9 @@
   --blist--hint--size: 14px;
   --blist--hint--height: 18px;
   --blist--hint--weight: 400;
+  --blist--error--size: 12px;
+  --blist--error--height: 18px;
+  --blist--error--weight: 500;
   --blist--h1--size: 24px;
   --blist--h1--height: 32px;
   --blist--h1--weight: 500;
@@ -73,6 +82,9 @@
   --blist--field-padding: 8px;
   --blist--field-indent: var(--blist--indent-small);
   --blist--field--large-height: 50px;
+  --blist--card-padding: var(--blist--indent-half);
+  --blist--card--radio-size: var(--blist--indent-large);
+  --blist--card--radio-size-inner: var(--blist--indent-half);
   --blist--overlay-duration: 500ms;
   --blist--overlay-color: rgba(255, 255, 255, 0.7);
   --blist--overlay--spinner-size: 32px;
@@ -86,7 +98,7 @@
 .blist__status--open {
   overflow: hidden; }
 
-.blist__reset--block, .blist__wrapper img, .blist__wrapper dl, .blist__wrapper dt, .blist__wrapper dd, .blist__wrapper ul, .blist__wrapper ol, .blist__wrapper li, .blist__wrapper hr, .blist__wrapper form, .blist__wrapper input, .blist__wrapper select, .blist__wrapper textarea, .blist__wrapper button {
+.blist__reset--block, .blist__wrapper img, .blist__wrapper dl, .blist__wrapper dt, .blist__wrapper dd, .blist__wrapper ul, .blist__wrapper ol, .blist__wrapper li, .blist__wrapper hr, .blist__wrapper form, .blist__wrapper label, .blist__wrapper input, .blist__wrapper select, .blist__wrapper textarea, .blist__wrapper button, .blist__wrapper h1, .blist__wrapper h2, .blist__wrapper h3, .blist__wrapper h4, .blist__wrapper h5, .blist__wrapper h6, .blist__wrapper p {
   width: auto;
   height: auto;
   min-width: 0;
@@ -99,8 +111,8 @@
   box-shadow: none;
   border: none;
   border-radius: 0; }
-  .blist__reset--block:before, .blist__wrapper img:before, .blist__wrapper dl:before, .blist__wrapper dt:before, .blist__wrapper dd:before, .blist__wrapper ul:before, .blist__wrapper ol:before, .blist__wrapper li:before, .blist__wrapper hr:before, .blist__wrapper form:before, .blist__wrapper input:before, .blist__wrapper select:before, .blist__wrapper textarea:before, .blist__wrapper button:before, .blist__reset--block:after, .blist__wrapper img:after, .blist__wrapper dl:after, .blist__wrapper dt:after, .blist__wrapper dd:after, .blist__wrapper ul:after, .blist__wrapper ol:after, .blist__wrapper li:after, .blist__wrapper hr:after, .blist__wrapper form:after, .blist__wrapper input:after, .blist__wrapper select:after, .blist__wrapper textarea:after, .blist__wrapper button:after {
-    display: none; }
+  .blist__reset--block:before, .blist__wrapper img:before, .blist__wrapper dl:before, .blist__wrapper dt:before, .blist__wrapper dd:before, .blist__wrapper ul:before, .blist__wrapper ol:before, .blist__wrapper li:before, .blist__wrapper hr:before, .blist__wrapper form:before, .blist__wrapper label:before, .blist__wrapper input:before, .blist__wrapper select:before, .blist__wrapper textarea:before, .blist__wrapper button:before, .blist__wrapper h1:before, .blist__wrapper h2:before, .blist__wrapper h3:before, .blist__wrapper h4:before, .blist__wrapper h5:before, .blist__wrapper h6:before, .blist__wrapper p:before, .blist__reset--block:after, .blist__wrapper img:after, .blist__wrapper dl:after, .blist__wrapper dt:after, .blist__wrapper dd:after, .blist__wrapper ul:after, .blist__wrapper ol:after, .blist__wrapper li:after, .blist__wrapper hr:after, .blist__wrapper form:after, .blist__wrapper label:after, .blist__wrapper input:after, .blist__wrapper select:after, .blist__wrapper textarea:after, .blist__wrapper button:after, .blist__wrapper h1:after, .blist__wrapper h2:after, .blist__wrapper h3:after, .blist__wrapper h4:after, .blist__wrapper h5:after, .blist__wrapper h6:after, .blist__wrapper p:after {
+    all: initial; }
 
 .blist__align--left {
   text-align: left; }
@@ -142,7 +154,8 @@
     flex-wrap: wrap;
     margin: calc(-1 * var(--blist--indent-quarter)); }
     .blist__buttons__inner .blist__button {
-      margin: var(--blist--indent-quarter); }
+      margin: var(--blist--indent-quarter);
+      flex: 1; }
   .blist__buttons.pull-center .blist__buttons__inner {
     justify-content: center; }
 
@@ -179,13 +192,14 @@
   letter-spacing: initial;
   word-spacing: initial;
   white-space: initial;
+  text-align: initial;
   text-indent: initial;
   text-transform: none;
   text-shadow: none;
   text-decoration: none;
   color: var(--blist--color-primary); }
 
-.blist__font--inherit, .blist__wrapper h1, .blist__wrapper h2, .blist__wrapper h3, .blist__wrapper h4, .blist__wrapper h5, .blist__wrapper h6, .blist__wrapper p, .blist__wrapper dl, .blist__wrapper ul, .blist__wrapper ol, .blist__wrapper a, .blist__input::placeholder {
+.blist__font--inherit, .blist__wrapper dl, .blist__wrapper dt, .blist__wrapper dd, .blist__wrapper ul, .blist__wrapper ol, .blist__wrapper li, .blist__wrapper h1, .blist__wrapper h2, .blist__wrapper h3, .blist__wrapper h4, .blist__wrapper h5, .blist__wrapper h6, .blist__wrapper p, .blist__wrapper a, .blist__input::placeholder {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
@@ -194,16 +208,22 @@
   letter-spacing: inherit;
   word-spacing: inherit;
   white-space: inherit;
+  text-align: inherit;
   text-indent: inherit;
   text-transform: inherit;
   text-shadow: inherit;
   text-decoration: inherit;
   color: inherit; }
 
-.blist__font--hint, .blist__form__notification {
+.blist__font--hint, .blist__card__text, .blist__card__separator, .blist__card__status, .blist__form__notification {
   font-size: var(--blist--hint--size);
   font-weight: var(--blist--hint--weight);
   line-height: var(--blist--hint--height); }
+
+.blist__font--error, .blist__field__hint {
+  font-size: var(--blist--error--size);
+  font-weight: var(--blist--error--weight);
+  line-height: var(--blist--error--height); }
 
 .blist__font--h1, .blist__wrapper h1 {
   font-size: var(--blist--h1--size);
@@ -262,6 +282,77 @@
   .blist__wrapper b, .blist__wrapper strong {
     font-weight: var(--blist--bold--weight); }
 
+.blist__cards {
+  margin-bottom: var(--blist--indent); }
+  .blist__cards:last-child {
+    margin-bottom: 0; }
+
+.blist__card {
+  padding: var(--blist--card-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0 solid var(--blist--color-separator);
+  border-top-width: 2px;
+  cursor: pointer;
+  transition: all var(--blist--transition-duration) ease-in-out; }
+  .blist__card:last-child {
+    border-bottom-width: 2px; }
+  .blist__card__radio {
+    width: var(--blist--card--radio-size);
+    height: var(--blist--card--radio-size);
+    display: flex;
+    flex: none;
+    position: relative;
+    margin-left: var(--blist--card-padding);
+    border: 2px solid var(--blist--border-color);
+    border-radius: 100%;
+    transition: all var(--blist--transition-duration) ease-in-out; }
+    .blist__card__radio input {
+      position: absolute;
+      visibility: hidden; }
+    .blist__card__radio:before {
+      width: var(--blist--card--radio-size-inner);
+      height: var(--blist--card--radio-size-inner);
+      display: block;
+      margin: auto;
+      border-radius: 100%;
+      content: '';
+      transition: all var(--blist--transition-duration) ease-in-out; }
+    .blist__card__radio:hover {
+      border-color: var(--blist--color-accent); }
+  .blist__card__name {
+    font-weight: var(--blist--bold--weight);
+    text-transform: uppercase; }
+  .blist__card__text, .blist__card__separator, .blist__card__status {
+    display: inline-block;
+    vertical-align: top; }
+  .blist__card__text {
+    color: var(--blist--color-secondary); }
+  .blist__card__separator {
+    margin: 0 var(--blist--indent-quarter);
+    font-weight: var(--blist--bold--weight);
+    color: var(--blist--color-separator); }
+  .blist__card__status {
+    font-weight: var(--blist--bold--weight); }
+    .blist__card__status.active {
+      color: var(--blist--color-success); }
+    .blist__card__status.pending {
+      color: var(--blist--color-warning); }
+    .blist__card__status.expire, .blist__card__status.expired {
+      color: var(--blist--color-danger); }
+  .blist__card:hover {
+    background: var(--blist--color-accent-bacgkround);
+    transition: all var(--blist--transition-duration-fast) ease-in-out; }
+  .blist__card.is-hidden {
+    display: none; }
+  .blist__card.is-active {
+    background-color: var(--blist--color-accent-bacgkround); }
+    .blist__card.is-active .blist__card__radio {
+      border-color: var(--blist--color-accent); }
+      .blist__card.is-active .blist__card__radio:before {
+        background-color: var(--blist--color-accent); }
+
 .blist__dialog {
   width: 100%;
   max-width: var(--blist--dialog-width);
@@ -315,6 +406,7 @@
     .blist__dialog__links ul {
       display: flex;
       flex-wrap: wrap;
+      flex-direction: column;
       justify-content: center; }
     .blist__dialog__links a {
       color: var(--blist--color-secondary); }
@@ -340,13 +432,20 @@
 
 .blist__form__notification {
   padding: var(--blist--indent-half);
-  border: 1px solid var(--blist--border-color);
   border-radius: var(--blist--border-radius);
   box-shadow: var(--blist--shadow); }
+  .blist__form__notification.is-secondary {
+    background: var(--blist--color-secondary-bacgkround);
+    color: var(--blist--secondary); }
   .blist__form__notification.is-danger {
-    background: var(--blist--color-error-bacgkround);
-    border-color: var(--blist--color-error-border);
-    color: var(--blist--color-error); }
+    background: var(--blist--color-danger-bacgkround);
+    color: var(--blist--color-danger); }
+  .blist__form__notification.is-warning {
+    background: var(--blist--color-warning-bacgkround);
+    color: var(--blist--color-warning); }
+  .blist__form__notification.is-success {
+    background: var(--blist--color-success-bacgkround);
+    color: var(--blist--color-success); }
   .blist__form__notification.is-hidden {
     display: none; }
 
@@ -356,6 +455,19 @@
 /*** FIELD ***/
 .blist__field.blist__field {
   margin-bottom: var(--blist--field-indent); }
+
+.blist__field__hint {
+  margin-top: var(--blist--indent-quarter); }
+  .blist__field__hint:before {
+    content: ' - '; }
+  .blist__field__hint.is-danger {
+    color: var(--blist--color-danger); }
+  .blist__field__hint.is-warning {
+    color: var(--blist--color-warning); }
+  .blist__field__hint.is-success {
+    color: var(--blist--color-success); }
+  .blist__field__hint.is-hidden {
+    display: none; }
 
 /*** INPUT **/
 .blist__input.blist__input {
@@ -377,10 +489,10 @@
     box-shadow: 0 0 1px var(--blist--color-accent);
     transition: all var(--blist--transition-duration-fast) ease-in-out, height none; }
   .blist__input.blist__input.is-invalid {
-    border-color: var(--blist--color-error);
-    color: var(--blist--color-error); }
+    border-color: var(--blist--color-danger);
+    color: var(--blist--color-danger); }
     .blist__input.blist__input.is-invalid:focus {
-      box-shadow: 0 0 1px var(--blist--color-error); }
+      box-shadow: 0 0 1px var(--blist--color-danger); }
   .blist__input.blist__input--textarea {
     height: var(--blist--field-height-textarea);
     min-height: var(--blist--field-height);
@@ -393,13 +505,16 @@
   min-width: var(--blist--button-width);
   max-width: 100%;
   height: var(--blist--button-height);
+  display: block;
   padding: calc((var(--blist--button-height) - var(--blist--font--height)) / 2) var(--blist--button-padding);
   background: var(--blist--color-accent);
   border-radius: var(--blist--border-radius);
   color: var(--blist--button-color);
   font-weight: var(--blist--button-weight);
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+  white-space: nowrap;
   cursor: pointer;
   transition: all var(--blist--transition-duration) ease-in-out; }
   .blist__button.blist__button:hover, .blist__button.blist__button:active, .blist__button.blist__button:focus {
@@ -478,18 +593,18 @@
     opacity: 1; }
 
 @media only screen and (min-width: 641px) {
-  .blist__dialog__links ul {
+  .blist__dialog__links--horizontal ul {
     flex-direction: row; }
-    .blist__dialog__links ul li {
+    .blist__dialog__links--horizontal ul li {
       display: flex;
       white-space: nowrap; }
-      .blist__dialog__links ul li:not(:last-child):after {
+      .blist__dialog__links--horizontal ul li:not(:last-child):after {
         display: block;
         margin: 0 4px;
         content: '・'; } }
 
 @media only screen and (max-width: 640px) {
+  .blist__buttons__inner {
+    flex-direction: column; }
   .blist__popup__inner {
-    padding: 0; }
-  .blist__dialog__links ul {
-    flex-direction: column; } }
+    padding: 0; } }

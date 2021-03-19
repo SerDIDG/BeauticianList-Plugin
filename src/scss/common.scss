@@ -23,7 +23,7 @@
 
 		&:before,
 		&:after {
-			display: none;
+			all: initial;
 		}
 	}
 }
@@ -115,6 +115,7 @@
 
 		.blist__button {
 			margin: var(--blist--indent-quarter);
+			flex: 1;
 		}
 	}
 

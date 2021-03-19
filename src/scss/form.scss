@@ -16,14 +16,27 @@
 	&__notification {
 		@extend .blist__font--hint;
 		padding: var(--blist--indent-half);
-		border: 1px solid var(--blist--border-color);
 		border-radius: var(--blist--border-radius);
 		box-shadow: var(--blist--shadow);
 
+		&.is-secondary {
+			background: var(--blist--color-secondary-bacgkround);
+			color: var(--blist--secondary);
+		}
+
 		&.is-danger {
-			background: var(--blist--color-error-bacgkround);
-			border-color: var(--blist--color-error-border);
-			color: var(--blist--color-error);
+			background: var(--blist--color-danger-bacgkround);
+			color: var(--blist--color-danger);
+		}
+
+		&.is-warning {
+			background: var(--blist--color-warning-bacgkround);
+			color: var(--blist--color-warning);
+		}
+
+		&.is-success {
+			background: var(--blist--color-success-bacgkround);
+			color: var(--blist--color-success);
 		}
 
 		&.is-hidden {
@@ -44,8 +57,35 @@
 	margin-bottom: var(--blist--field-indent);
 }
 
-.blist__field.blist__field {
-	@include field;
+.blist__field {
+	&.blist__field {
+		@include field;
+	}
+
+	&__hint {
+		@extend .blist__font--error;
+		margin-top: var(--blist--indent-quarter);
+
+		&:before {
+			content: ' - ';
+		}
+
+		&.is-danger {
+			color: var(--blist--color-danger);
+		}
+
+		&.is-warning {
+			color: var(--blist--color-warning);
+		}
+
+		&.is-success {
+			color: var(--blist--color-success);
+		}
+
+		&.is-hidden {
+			display: none;
+		}
+	}
 }
 
 /*** INPUT **/
@@ -78,11 +118,11 @@
 	}
 
 	&.is-invalid {
-		border-color: var(--blist--color-error);
-		color: var(--blist--color-error);
+		border-color: var(--blist--color-danger);
+		color: var(--blist--color-danger);
 
 		&:focus {
-			box-shadow: 0 0 1px var(--blist--color-error);
+			box-shadow: 0 0 1px var(--blist--color-danger);
 		}
 	}
 }
@@ -109,13 +149,16 @@
 	min-width: var(--blist--button-width);
 	max-width: 100%;
 	height: var(--blist--button-height);
+	display: block;
 	padding: calc((var(--blist--button-height) - var(--blist--font--height)) / 2) var(--blist--button-padding);
 	background: var(--blist--color-accent);
 	border-radius: var(--blist--border-radius);
 	color: var(--blist--button-color);
 	font-weight: var(--blist--button-weight);
+	text-align: center;
 	text-transform: uppercase;
 	text-decoration: none;
+	white-space: nowrap;
 	cursor: pointer;
 	transition: all var(--blist--transition-duration) ease-in-out;
 

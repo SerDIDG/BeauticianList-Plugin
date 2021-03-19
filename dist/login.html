@@ -30,16 +30,18 @@
                             <div class="blist__form__header">
                                 <h2>Login as Beauty Pro</h2>
                             </div>
-                            <div class="blist__form__notification is-danger">The email and/or password you entered is incorrect. Please verify and re-enter. If you need help resetting your password, please click "Forgot Password" link below.</div>
                             <div class="blist__form__content">
+                                <div class="blist__form__notification is-danger">The email and/or password you entered is incorrect. Please verify and re-enter. If you need help resetting your password, please click "Forgot Password" link below.</div>
                                 <dl class="blist__field blist__field--vertical">
                                     <dd>
                                         <input class="blist__input is-required" type="text" name="email" placeholder="Email" title="Email">
+                                        <div class="blist__field__hint is-danger is-hidden">This field is required.</div>
                                     </dd>
                                 </dl>
                                 <dl class="blist__field blist__field--vertical">
                                     <dd>
                                         <input class="blist__input is-invalid" type="password" name="password" placeholder="Password" title="Password">
+                                        <div class="blist__field__hint is-danger">This field is required.</div>
                                     </dd>
                                 </dl>
                                 <div class="blist__buttons">
@@ -60,7 +62,7 @@
                                     <a>Create Account</a>
                                 </li>
                                 <li>
-                                    <a>Report a Problem</a>
+                                    <a>Report a problem</a>
                                 </li>
                             </ul>
                         </div>
