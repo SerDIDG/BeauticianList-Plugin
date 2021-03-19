@@ -321,6 +321,8 @@
       transition: all var(--blist--transition-duration) ease-in-out; }
     .blist__card__radio:hover {
       border-color: var(--blist--color-accent); }
+  .blist__card__details {
+    vertical-align: top; }
   .blist__card__name {
     font-weight: var(--blist--bold--weight);
     text-transform: uppercase; }

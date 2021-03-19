@@ -48,6 +48,10 @@
 		}
 	}
 
+	&__details {
+		vertical-align: top;
+	}
+
 	&__name {
 		font-weight: var(--blist--bold--weight);
 		text-transform: uppercase;
