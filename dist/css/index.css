@@ -469,6 +469,11 @@
     font-weight: var(--blist--accent--weight); }
   .blist__field.blist__field--vertical > dt {
     margin-bottom: var(--blist--field--title-indent); }
+  .blist__field.blist__field--vertical > dd {
+    margin-bottom: var(--blist--indent);
+    margin-bottom: var(--blist--field-indent); }
+    .blist__field.blist__field--vertical > dd:last-child {
+      margin-bottom: 0; }
   .blist__field.blist__field--group {
     padding: var(--blist--field--group-padding); }
 

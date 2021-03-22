@@ -64,6 +64,11 @@
 		> dt {
 			margin-bottom: var(--blist--field--title-indent);
 		}
+
+		> dd {
+			@include box;
+			margin-bottom: var(--blist--field-indent);
+		}
 	}
 
 	&--group {
