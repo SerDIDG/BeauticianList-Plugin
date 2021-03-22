@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body class="blist__status--open">
+
+<div class="blist__wrapper">
+
+    <div class="blist__overlay is-show"></div>
+
+    <div class="blist__popup is-show">
+        <div class="blist__popup__inner">
+            <div class="blist__dialog">
+                <div class="blist__dialog__close has-hover" title="Close"></div>
+
+                <div class="blist__dialog__inner">
+                    <div class="blist__dialog__header">
+                        <h1>License Verification via</h1>
+                        <div class="blist__dialog__logo">
+                            <img src="https://beauty-pro-verify-v2.beauticianlist.com/assets/b-list.png" title="BeauticianList" alt="BeauticianList">
+                        </div>
+                    </div>
+
+                    <div class="blist__dialog__content">
+                        <form class="blist__form blist__form--registration">
+                            <div class="blist__form__header">
+                                <h2>Finish Registration</h2>
+                            </div>
+                            <div class="blist__form__content">
+                                <dl class="blist__field blist__field--vertical">
+                                    <dd>
+                                        <input class="blist__input" type="text" name="firstname" disabled placeholder="First name" title="First name">
+                                    </dd>
+                                </dl>
+                                <dl class="blist__field blist__field--vertical">
+                                    <dd>
+                                        <input class="blist__input is-required" type="text" disabled name="lastname" placeholder="Last name *" title="Last name">
+                                    </dd>
+                                </dl>
+                                <dl class="blist__field blist__field--vertical">
+                                    <dd>
+                                        <input class="blist__input is-required" type="text" disabled name="email" placeholder="Email *" title="Email">
+                                    </dd>
+                                </dl>
+                                <dl class="blist__field blist__field--vertical">
+                                    <dd>
+                                        <input class="blist__input is-required" type="text" disabled name="state" autocomplete="off" placeholder="State *" title="State">
+                                    </dd>
+                                </dl>
+                                <dl class="blist__field blist__field--vertical">
+                                    <dd>
+                                        <input class="blist__input is-required" type="text" disabled name="license" placeholder="License Number *" title="License Number">
+                                    </dd>
+                                </dl>
+                                <dl class="blist__field blist__field--vertical">
+                                    <dd>
+                                        <input class="blist__input" type="tel" name="tel" placeholder="Mobile" title="Mobile">
+                                    </dd>
+                                </dl>
+                                <dl class="blist__field blist__field--vertical">
+                                    <dd>
+                                        <input class="blist__input is-required" type="password" name="password" placeholder="Password *" title="Password">
+                                    </dd>
+                                </dl>
+                                <dl class="blist__field blist__field--vertical">
+                                    <dd>
+                                        <input class="blist__input" type="text" name="address" placeholder="Working address" title="Working address">
+                                    </dd>
+                                </dl>
+                                <dl class="blist__field blist__field--vertical">
+                                    <dt>
+                                        <label for="registration[speciality]">Choose your Speciality <span class="required">*</span></label>
+                                    </dt>
+                                    <dd>
+                                        <select class="blist__input blist__input--select is-required" id="registration[speciality]" name="speciality" multiple>
+                                            <optgroup label="Skin">Skin</optgroup>
+                                            <option value="5a58b524fdfbf23e8d5c436a">Acne</option>
+                                            <option value="5aa2bececbbbd40026b30ba6">Anti Aging</option>
+                                            <option value="5aa2befccbbbd40026b30bab">Chemical peels</option>
+                                            <option value="5a538f2afdfbf23e8d51b2b0">Dry Skin</option>
+                                            <option value="5aa2bef0cbbbd40026b30baa">Gua sha</option>
+                                            <option value="5a58b537fdfbf23e8d5c4791">Hair Removal</option>
+                                            <option value="5a58f6f8fdfbf23e8d68fa34">Hyperpigmentation</option>
+                                            <option value="5aa2bee7cbbbd40026b30ba9">LED therapy</option>
+                                        </select>
+                                        <div class="blist__field__hint is-secondary">Click CTRL to select multiple options</div>
+                                    </dd>
+                                </dl>
+                                <dl class="blist__field blist__field--vertical blist__field--group">
+                                    <dd>
+                                        <div class="blist__check">
+                                            <label class="blist__check__label" for="registration[subscribe]">
+                                                <input class="blist__input blist__input--check" type="checkbox" id="registration[subscribe]" value="Yes">
+                                                <span class="blist__check__text">Subscribe to email updates</span>
+                                            </label>
+                                        </div>
+                                        <div class="blist__check">
+                                            <label class="blist__check__label" for="registration[third-party]">
+                                                <input class="blist__input blist__input--check" type="checkbox" id="registration[third-party]" value="Yes">
+                                                <span class="blist__check__text">Opt in to our third party list to receive relevant offers from our sponsors and partners</span>
+                                            </label>
+                                        </div>
+                                        <div class="blist__check is-required">
+                                            <label class="blist__check__label" for="registration[agree]">
+                                                <input class="blist__input blist__input--check" type="checkbox" id="registration[agree]" value="Yes">
+                                                <span class="blist__check__text">I have read and understand the <a href="https://beauticianlist.com/pages/disclaimer-licensedbeautician" target="_blank">disclaimer</a> *</span>
+                                            </label>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <div class="blist__buttons">
+                                    <button class="blist__button blist__button--primary" type="submit">Sign Up</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="blist__dialog__footer">
+                        <hr class="blist__hr blist__hr--dashed is-small">
+                        <div class="blist__dialog__links blist__dialog__links--vertical">
+                            <ul>
+                                <li>
+                                    <a>Already have a profile on Beautician List? <strong>Login Here</strong></a>
+                                </li>
+                                <li>
+                                    <a>International customer? <strong>Click Here</strong></a>
+                                </li>
+                                <li>
+                                    <a>Report a problem</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

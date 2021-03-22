@@ -21,7 +21,7 @@
 
 		&.is-secondary {
 			background: var(--blist--color-secondary-bacgkround);
-			color: var(--blist--secondary);
+			color: var(--blist--color-secondary);
 		}
 
 		&.is-danger {
@@ -55,6 +55,20 @@
 
 @mixin field {
 	margin-bottom: var(--blist--field-indent);
+
+	> dt {
+		font-weight: var(--blist--accent--weight);
+	}
+
+	&--vertical {
+		> dt {
+			margin-bottom: var(--blist--field--title-indent);
+		}
+	}
+
+	&--group {
+		padding: var(--blist--field--group-padding);
+	}
 }
 
 .blist__field {
@@ -65,6 +79,7 @@
 	&__hint {
 		@extend .blist__font--error;
 		margin-top: var(--blist--indent-quarter);
+		font-style: italic;
 
 		&:before {
 			content: ' - ';
@@ -117,6 +132,12 @@
 		transition: all var(--blist--transition-duration-fast) ease-in-out, height none;
 	}
 
+	&:disabled {
+		background: var(--blist--color-secondary-disabled);
+		border-color: var(--blist--border-color);
+		box-shadow: none;
+	}
+
 	&.is-invalid {
 		border-color: var(--blist--color-danger);
 		color: var(--blist--color-danger);
@@ -127,19 +148,65 @@
 	}
 }
 
+@mixin check {
+	width: auto;
+	height: auto;
+}
+
 @mixin textarea {
-	height: var(--blist--field-height-textarea);
+	height: var(--blist--field--textarea-height);
 	min-height: var(--blist--field-height);
 	max-height: var(--blist--field-height-max);
 	overflow: auto;
 	resize: vertical;
 }
 
+@mixin select {
+	height: var(--blist--field--select-height);
+	padding: var(--blist--field--select-padding);
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
 .blist__input.blist__input {
 	@include input;
 
+	&--check {
+		@include check;
+	}
+
 	&--textarea {
 		@include textarea;
+	}
+
+	&--select {
+		@include select;
+	}
+}
+
+/*** CHECK ***/
+
+.blist__check {
+	$self: &;
+	@include box;
+	margin-bottom: var(--blist--field-indent);
+
+	#{$self}__label {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+	}
+
+	#{$self}__text {
+		@extend .blist__font--hint;
+		font-weight: var(--blist--accent--weight);
+	}
+
+	.blist__input {
+		height: var(--blist--hint--height);
+		margin-right: var(--blist--field--check-indent);
+		flex: none;
+		align-self: flex-start;
 	}
 }
 

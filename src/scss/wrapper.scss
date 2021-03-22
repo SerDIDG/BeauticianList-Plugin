@@ -40,7 +40,7 @@
 		border-top: 1px solid var(--blist--border-color);
 	}
 
-	form, label {
+	form {
 		@extend .blist__reset--block;
 	}
 
@@ -50,6 +50,11 @@
 		width: 100%;
 		outline: none;
 		background-clip: padding-box;
+	}
+
+	label {
+		@extend .blist__reset--block;
+		@extend .blist__font--inherit;
 	}
 
 	h1, h2, h3, h4, h5, h6, p, dl, ul, ol {

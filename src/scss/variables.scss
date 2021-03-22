@@ -8,6 +8,7 @@ $screen-mobile: 640px;
 	--blist--indent: 24px;
 	--blist--indent-small: 16px;
 	--blist--indent-half: 12px;
+	--blist--indent-third: 8px;
 	--blist--indent-quarter: 6px;
 
 	--blist--shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
@@ -30,6 +31,7 @@ $screen-mobile: 640px;
 	--blist--color-secondary: rgb(var(--blist--color-secondary-value));
 	--blist--color-secondary-hover: rgb(var(--blist--color-secondary-value), 0.9);
 	--blist--color-secondary-bacgkround: rgb(var(--blist--color-secondary-value), 0.05);
+	--blist--color-secondary-disabled: rgb(var(--blist--color-secondary-value), 0.15);
 	--blist--color-secondary-border: rgb(var(--blist--color-secondary-value), 0.25);
 
 	--blist--color-danger-value: 212, 53, 53;
@@ -54,6 +56,7 @@ $screen-mobile: 640px;
 	// *** FONT ***
 
 	--blist--bold--weight: 600;
+	--blist--accent--weight: 500;
 
 	--blist--font--size: 16px;
 	--blist--font--height: 24px;
@@ -89,10 +92,15 @@ $screen-mobile: 640px;
 
 	--blist--field-height: 40px;
 	--blist--field-height-max: 500px;
-	--blist--field-height-textarea: 100px;
-	--blist--field-padding: 8px;
+	--blist--field-padding: var(--blist--indent-third);
 	--blist--field-indent: var(--blist--indent-small);
+	--blist--field--title-indent: calc(var(--blist--indent-third) / 2);
 	--blist--field--large-height: 50px;
+	--blist--field--textarea-height: 100px;
+	--blist--field--select-height: 128px;
+	--blist--field--select-padding: calc(var(--blist--indent-third) / 2);
+	--blist--field--check-indent: var(--blist--indent-third);
+	--blist--field--group-padding: var(--blist--indent-third) 0;
 
 	// *** CARD ***
 
