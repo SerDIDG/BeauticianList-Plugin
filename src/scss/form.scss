@@ -269,6 +269,10 @@
 		}
 	}
 
+	&--browse {
+		overflow: hidden;
+	}
+
 	&.is-large {
 		--blist--button-width: var(--blist--button--large-width);
 		--blist--button-height: var(--blist--button--large-height);
@@ -289,7 +293,7 @@
 
 	#{$self}__browse {
 		position: absolute;
-		top: 0;
+		top: 100%;
 		right: 0;
 		bottom: 0;
 		left: 0;

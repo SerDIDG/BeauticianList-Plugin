@@ -587,6 +587,8 @@
     background: var(--blist--color-secondary); }
     .blist__button.blist__button--secondary:hover, .blist__button.blist__button--secondary:active {
       background: var(--blist--color-secondary-hover); }
+  .blist__button.blist__button--browse {
+    overflow: hidden; }
   .blist__button.blist__button.is-large {
     --blist--button-width: var(--blist--button--large-width);
     --blist--button-height: var(--blist--button--large-height);
@@ -597,7 +599,7 @@
 
 .blist__button .blist__button__browse {
   position: absolute;
-  top: 0;
+  top: 100%;
   right: 0;
   bottom: 0;
   left: 0;
