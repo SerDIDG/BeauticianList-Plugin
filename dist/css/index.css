@@ -89,6 +89,7 @@
   --blist--field--select-height: 128px;
   --blist--field--select-padding: calc(var(--blist--indent-third) / 2);
   --blist--field--check-indent: var(--blist--indent-third);
+  --blist--field--button-indent: var(--blist--indent-third);
   --blist--field--group-padding: var(--blist--indent-third) 0;
   --blist--card-padding: var(--blist--indent-half);
   --blist--card--radio-size: var(--blist--indent-large);
@@ -223,7 +224,7 @@
   text-decoration: inherit;
   color: inherit; }
 
-.blist__font--hint, .blist__card__text, .blist__card__separator, .blist__card__status, .blist__form__notification, .blist__check .blist__check__text {
+.blist__font--hint, .blist__card__text, .blist__card__separator, .blist__card__status, .blist__form__notification, .blist__check .blist__check__text, .blist__file .blist__file__label {
   font-size: var(--blist--hint--size);
   font-weight: var(--blist--hint--weight);
   line-height: var(--blist--hint--height); }
@@ -476,6 +477,8 @@
       margin-bottom: 0; }
   .blist__field.blist__field--group {
     padding: var(--blist--field--group-padding); }
+  .blist__field.blist__field.is-padded {
+    padding: var(--blist--field--group-padding); }
 
 .blist__field__hint {
   margin-top: var(--blist--indent-quarter);
@@ -558,6 +561,7 @@
   max-width: 100%;
   height: var(--blist--button-height);
   display: block;
+  position: relative;
   padding: calc((var(--blist--button-height) - var(--blist--font--height)) / 2) var(--blist--button-padding);
   background: var(--blist--color-accent);
   border-radius: var(--blist--border-radius);
@@ -587,6 +591,34 @@
     --blist--button-width: var(--blist--button--large-width);
     --blist--button-height: var(--blist--button--large-height);
     --blist--button-padding: var(--blist--button--large-padding); }
+
+.blist__button .blist__button__label {
+  cursor: pointer; }
+
+.blist__button .blist__button__browse {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  pointer-events: none;
+  cursor: pointer; }
+
+.blist__file {
+  margin-bottom: var(--blist--indent);
+  margin-bottom: var(--blist--field--button-indent);
+  display: flex;
+  align-items: center; }
+  .blist__file:last-child {
+    margin-bottom: 0; }
+  .blist__file .blist__file__label {
+    margin: 0 0 0 var(--blist--indent-half);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+  .blist__file .blist__button {
+    align-self: flex-start; }
 
 .blist__overlay {
   position: fixed;

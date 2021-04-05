@@ -74,6 +74,10 @@
 	&--group {
 		padding: var(--blist--field--group-padding);
 	}
+
+	&.is-padded {
+		padding: var(--blist--field--group-padding);
+	}
 }
 
 .blist__field {
@@ -222,6 +226,7 @@
 	max-width: 100%;
 	height: var(--blist--button-height);
 	display: block;
+	position: relative;
 	padding: calc((var(--blist--button-height) - var(--blist--font--height)) / 2) var(--blist--button-padding);
 	background: var(--blist--color-accent);
 	border-radius: var(--blist--border-radius);
@@ -271,6 +276,45 @@
 	}
 }
 
-.blist__button.blist__button {
-	@include button;
+.blist__button {
+	$self: &;
+
+	&.blist__button {
+		@include button;
+	}
+
+	#{$self}__label {
+		cursor: pointer;
+	}
+
+	#{$self}__browse {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		visibility: hidden;
+		pointer-events: none;
+		cursor: pointer;
+	}
+}
+
+.blist__file {
+	$self: &;
+	@include box;
+	margin-bottom: var(--blist--field--button-indent);
+	display: flex;
+	align-items: center;
+
+	#{$self}__label {
+		@extend .blist__font--hint;
+		margin: 0 0 0 var(--blist--indent-half);
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	.blist__button {
+		align-self: flex-start;
+	}
 }
