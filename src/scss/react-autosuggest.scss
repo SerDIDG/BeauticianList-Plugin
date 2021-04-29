@@ -1,0 +1,69 @@
+.react-autosuggest {
+	$self: &;
+
+	&__container {
+		position: relative;
+
+		&--open {
+			#{$self}__suggestions-container {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+
+	&__suggestions-container {
+		max-height: calc(var(--blist--tooltip--item-height) * var(--blist--tooltip-max-items));
+		margin: var(--blist--tooltip-indent) 0 0 0;
+		visibility: hidden;
+		opacity: 0;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		z-index: 10;
+		overflow-x: hidden;
+		overflow-y: auto;
+		scrollbar-width: thin;
+		-webkit-overflow-scrolling: touch;
+		background: var(--blist--tooltip-background);
+		background-clip: content-box;
+		border-radius: var(--blist--tooltip-radius);
+		box-shadow: var(--blist--tooltip-shadow);
+		transition: all var(--blist--tooltip-duration) ease-in-out;
+	}
+
+	&__suggestions-list {
+		#{$self}__suggestion {
+			padding: calc((var(--blist--tooltip--item-height) - var(--blist--font--height)) / 2) var(--blist--indent-third);
+			cursor: pointer;
+
+			div {
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+
+			&:hover {
+				background: var(--blist--tooltip--item-hover-background);
+			}
+
+			&:active {
+				background: var(--blist--tooltip--item-active-background);
+				color: var(--blist--tooltip--item-active-color);
+			}
+
+			&#{$self}__suggestion {
+				&--highlighted {
+					background: var(--blist--tooltip--item-highlighted-background);
+					color: var(--blist--tooltip--item-highlighted-color);
+
+					&:active {
+						background: var(--blist--tooltip--item-active-background);
+						color: var(--blist--tooltip--item-active-color);
+					}
+				}
+			}
+		}
+	}
+}

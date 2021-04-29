@@ -21,36 +21,45 @@
   --blist--indent-half: 12px;
   --blist--indent-third: 8px;
   --blist--indent-quarter: 6px;
+  --blist--indent-thin: 3px;
   --blist--shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  --blist--shadow-thick: 0 2px 12px rgba(0, 0, 0, 0.2);
+  --blist--duration-long: 500ms;
+  --blist--duration: 250ms;
+  --blist--duration-short: 150ms;
   --blist--color-primary: rgb(0, 0, 0);
   --blist--color-border: rgb(127, 127, 127);
-  --blist--color-background: rgb(255, 255, 255);
   --blist--color-opposite: rgb(255, 255, 255);
   --blist--color-separator: rgb(229, 229, 229);
+  --blist--color-background-value: 255, 255, 255;
+  --blist--color-background: rgb(var(--blist--color-background-value));
+  --blist--color-background-overlay: rgba(var(--blist--color-background-value), 0.7);
   --blist--color-accent-value: 135, 65, 153;
   --blist--color-accent: rgb(var(--blist--color-accent-value));
-  --blist--color-accent-hover: rgb(var(--blist--color-accent-value), 0.9);
-  --blist--color-accent-bacgkround: rgb(var(--blist--color-accent-value), 0.05);
-  --blist--color-accent-border: rgb(var(--blist--color-accent-value), 0.25);
+  --blist--color-accent-hover: rgba(var(--blist--color-accent-value), 0.9);
+  --blist--color-accent-bacgkround: rgba(var(--blist--color-accent-value), 0.05);
+  --blist--color-accent-highlight: rgba(var(--blist--color-accent-value), 0.25);
+  --blist--color-accent-border: rgba(var(--blist--color-accent-value), 0.25);
   --blist--color-secondary-value: 108, 117, 125;
   --blist--color-secondary: rgb(var(--blist--color-secondary-value));
-  --blist--color-secondary-hover: rgb(var(--blist--color-secondary-value), 0.9);
-  --blist--color-secondary-bacgkround: rgb(var(--blist--color-secondary-value), 0.05);
-  --blist--color-secondary-disabled: rgb(var(--blist--color-secondary-value), 0.15);
-  --blist--color-secondary-border: rgb(var(--blist--color-secondary-value), 0.25);
+  --blist--color-secondary-hover: rgba(var(--blist--color-secondary-value), 0.9);
+  --blist--color-secondary-bacgkround: rgba(var(--blist--color-secondary-value), 0.05);
+  --blist--color-secondary-disabled: rgba(var(--blist--color-secondary-value), 0.15);
+  --blist--color-secondary-border: rgba(var(--blist--color-secondary-value), 0.25);
   --blist--color-danger-value: 212, 53, 53;
   --blist--color-danger: rgb(var(--blist--color-danger-value));
-  --blist--color-danger-hover: rgb(var(--blist--color-danger-value), 0.9);
-  --blist--color-danger-bacgkround: rgb(var(--blist--color-danger-value), 0.05);
-  --blist--color-danger-border: rgb(var(--blist--color-danger-value), 0.25);
+  --blist--color-danger-hover: rgba(var(--blist--color-danger-value), 0.9);
+  --blist--color-danger-bacgkround: rgba(var(--blist--color-danger-value), 0.05);
+  --blist--color-danger-border: rgba(var(--blist--color-danger-value), 0.25);
   --blist--color-warning-value: 224, 157, 40;
   --blist--color-warning: rgb(var(--blist--color-warning-value));
-  --blist--color-warning-bacgkround: rgb(var(--blist--color-warning-value), 0.05);
+  --blist--color-warning-bacgkround: rgba(var(--blist--color-warning-value), 0.05);
   --blist--color-success-value: 37, 176, 37;
   --blist--color-success: rgb(var(--blist--color-success-value));
-  --blist--color-success-bacgkround: rgb(var(--blist--color-success-value), 0.05);
+  --blist--color-success-bacgkround: rgba(var(--blist--color-success-value), 0.05);
   --blist--border-color: var(--blist--color-border);
   --blist--border-radius: 5px;
+  --blist--border--thick-size: 2px;
   --blist--bold--weight: 600;
   --blist--accent--weight: 500;
   --blist--font--size: 16px;
@@ -73,18 +82,21 @@
   --blist--button-width: 128px;
   --blist--button-height: var(--blist--field-height);
   --blist--button-padding: var(--blist--indent-small);
+  --blist--button-border-size: 0px;
   --blist--button-weight: 500;
   --blist--button-color: var(--blist--color-opposite);
   --blist--button-active-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.4);
   --blist--button--large-width: 256px;
   --blist--button--large-height: var(--blist--field--large-height);
   --blist--button--large-padding: var(--blist--indent-large);
+  --blist--buttons-indet: var(--blist--indent-quarter);
   --blist--field-height: 40px;
   --blist--field-height-max: 500px;
   --blist--field-padding: var(--blist--indent-third);
   --blist--field-indent: var(--blist--indent-small);
   --blist--field--title-indent: calc(var(--blist--indent-third) / 2);
   --blist--field--large-height: 50px;
+  --blist--field--small-height: 32px;
   --blist--field--textarea-height: 100px;
   --blist--field--select-height: 128px;
   --blist--field--select-padding: calc(var(--blist--indent-third) / 2);
@@ -94,15 +106,27 @@
   --blist--card-padding: var(--blist--indent-half);
   --blist--card--radio-size: var(--blist--indent-large);
   --blist--card--radio-size-inner: var(--blist--indent-half);
-  --blist--overlay-duration: 500ms;
-  --blist--overlay-color: rgba(255, 255, 255, 0.7);
-  --blist--overlay--spinner-size: 32px;
-  --blist--dialog-duration: 500ms;
+  --blist--overlay-duration: var(--blist--duration-long);
+  --blist--overlay-color: var(--blist--color-background-overlay);
+  --blist--overlay--spinner-size: var(--blist--field--small-height);
+  --blist--dialog-duration: var(--blist--duration-long);
   --blist--dialog-width: 720px;
   --blist--dialog-indent: var(--blist--indent-large);
   --blist--dialog-radius: var(--blist--border-radius);
   --blist--dialog-background: var(--blist--color-background);
-  --blist--dialog-shadow: 0 2px 12px rgba(0, 0, 0, 0.2); }
+  --blist--dialog-shadow: var(--blist--shadow-thick);
+  --blist--tooltip-duration: var(--blist--duration-short);
+  --blist--tooltip-indent: var(--blist--indent-thin);
+  --blist--tooltip-radius: var(--blist--border-radius);
+  --blist--tooltip-background: var(--blist--color-background);
+  --blist--tooltip-shadow: var(--blist--shadow-thick);
+  --blist--tooltip-max-items: 5;
+  --blist--tooltip--item-height: var(--blist--field--small-height);
+  --blist--tooltip--item-hover-background: var(--blist--color-accent-highlight);
+  --blist--tooltip--item-highlighted-background: var(--blist--color-accent);
+  --blist--tooltip--item-highlighted-color: var(--blist--color-opposite);
+  --blist--tooltip--item-active-background: var(--blist--color-accent-hover);
+  --blist--tooltip--item-active-color: var(--blist--color-opposite); }
 
 .blist__status--open {
   overflow: hidden; }
@@ -153,20 +177,6 @@
 .blist__hr.blist__hr.is-medium {
   width: 140px;
   background-position: 8px 0; }
-
-.blist__buttons {
-  margin-bottom: var(--blist--indent); }
-  .blist__buttons:last-child {
-    margin-bottom: 0; }
-  .blist__buttons__inner {
-    display: flex;
-    flex-wrap: wrap;
-    margin: calc(-1 * var(--blist--indent-quarter)); }
-    .blist__buttons__inner .blist__button {
-      margin: var(--blist--indent-quarter);
-      flex: 1; }
-  .blist__buttons.pull-center .blist__buttons__inner {
-    justify-content: center; }
 
 /*** ICONS ***/
 .blist__svg, .blist__dialog__close {
@@ -290,6 +300,38 @@
       text-decoration: underline; }
   .blist__wrapper b, .blist__wrapper strong {
     font-weight: var(--blist--bold--weight); }
+
+.blist__buttons {
+  margin-bottom: var(--blist--indent); }
+  .blist__buttons:last-child {
+    margin-bottom: 0; }
+  .blist__buttons__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc(-1 * var(--blist--buttons-indet)); }
+    .blist__buttons__inner .blist__button {
+      margin: var(--blist--buttons-indet);
+      flex: 1; }
+  .blist__buttons.pull-center .blist__buttons__inner {
+    justify-content: center; }
+  .blist__buttons--tabs {
+    border-bottom: var(--blist--border--thick-size) solid var(--blist--color-accent); }
+    .blist__buttons--tabs .blist__buttons__inner {
+      flex-wrap: nowrap;
+      margin-top: 0;
+      margin-bottom: calc(-1 * var(--blist--border--thick-size)); }
+      .blist__buttons--tabs .blist__buttons__inner .blist__button {
+        min-width: 200px;
+        margin-top: 0;
+        margin-bottom: 0;
+        flex: none;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        text-transform: none; }
+        .blist__buttons--tabs .blist__buttons__inner .blist__button--border {
+          border-bottom-color: var(--blist--color-background); }
+        .blist__buttons--tabs .blist__buttons__inner .blist__button--primary {
+          border-bottom-color: var(--blist--color-accent); }
 
 .blist__cards {
   margin-bottom: var(--blist--indent); }
@@ -479,6 +521,8 @@
     padding: var(--blist--field--group-padding); }
   .blist__field.blist__field.is-padded {
     padding: var(--blist--field--group-padding); }
+  .blist__field.blist__field.is-hidden {
+    display: none; }
 
 .blist__field__hint {
   margin-top: var(--blist--indent-quarter);
@@ -562,8 +606,9 @@
   height: var(--blist--button-height);
   display: block;
   position: relative;
-  padding: calc((var(--blist--button-height) - var(--blist--font--height)) / 2) var(--blist--button-padding);
+  padding: calc((var(--blist--button-height) - var(--blist--font--height) - var(--blist--button-border-size)) / 2) var(--blist--button-padding);
   background: var(--blist--color-accent);
+  border: var(--blist--button-border-size) solid var(--blist--color-accent);
   border-radius: var(--blist--border-radius);
   color: var(--blist--button-color);
   font-weight: var(--blist--button-weight);
@@ -573,14 +618,26 @@
   white-space: nowrap;
   cursor: pointer;
   transition: all var(--blist--transition-duration) ease-in-out; }
+  .blist__button.blist__button sup {
+    margin: -4px 0 0 2px;
+    position: absolute;
+    font-size: 10px;
+    text-transform: none; }
   .blist__button.blist__button:hover, .blist__button.blist__button:active, .blist__button.blist__button:focus {
     background: var(--blist--color-accent);
     text-decoration: none;
     transition: all var(--blist--transition-duration-fast) ease-in-out; }
   .blist__button.blist__button:active {
     box-shadow: var(--blist--button-active-shadow); }
+  .blist__button.blist__button--border {
+    --blist--button-border-size: var(--blist--border--thick-size);
+    background: var(--blist--color-background);
+    color: var(--blist--color-accent); }
+    .blist__button.blist__button--border:hover, .blist__button.blist__button--border:active {
+      background: var(--blist--color-background); }
   .blist__button.blist__button--primary {
-    background: var(--blist--color-accent); }
+    background: var(--blist--color-accent);
+    color: var(--blist--button-color); }
     .blist__button.blist__button--primary:hover, .blist__button.blist__button--primary:active {
       background: var(--blist--color-accent-hover); }
   .blist__button.blist__button--secondary {
@@ -678,6 +735,51 @@
     visibility: visible;
     opacity: 1; }
 
+.react-autosuggest__container {
+  position: relative; }
+  .react-autosuggest__container--open .react-autosuggest__suggestions-container {
+    visibility: visible;
+    opacity: 1; }
+
+.react-autosuggest__suggestions-container {
+  max-height: calc(var(--blist--tooltip--item-height) * var(--blist--tooltip-max-items));
+  margin: var(--blist--tooltip-indent) 0 0 0;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+  background: var(--blist--tooltip-background);
+  background-clip: content-box;
+  border-radius: var(--blist--tooltip-radius);
+  box-shadow: var(--blist--tooltip-shadow);
+  transition: all var(--blist--tooltip-duration) ease-in-out; }
+
+.react-autosuggest__suggestions-list .react-autosuggest__suggestion {
+  padding: calc((var(--blist--tooltip--item-height) - var(--blist--font--height)) / 2) var(--blist--indent-third);
+  cursor: pointer; }
+  .react-autosuggest__suggestions-list .react-autosuggest__suggestion div {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+  .react-autosuggest__suggestions-list .react-autosuggest__suggestion:hover {
+    background: var(--blist--tooltip--item-hover-background); }
+  .react-autosuggest__suggestions-list .react-autosuggest__suggestion:active {
+    background: var(--blist--tooltip--item-active-background);
+    color: var(--blist--tooltip--item-active-color); }
+  .react-autosuggest__suggestions-list .react-autosuggest__suggestion.react-autosuggest__suggestion--highlighted {
+    background: var(--blist--tooltip--item-highlighted-background);
+    color: var(--blist--tooltip--item-highlighted-color); }
+    .react-autosuggest__suggestions-list .react-autosuggest__suggestion.react-autosuggest__suggestion--highlighted:active {
+      background: var(--blist--tooltip--item-active-background);
+      color: var(--blist--tooltip--item-active-color); }
+
 @media only screen and (min-width: 641px) {
   .blist__dialog__links--horizontal ul {
     flex-direction: row; }
@@ -692,5 +794,12 @@
 @media only screen and (max-width: 640px) {
   .blist__buttons__inner {
     flex-direction: column; }
+  .blist__buttons--tabs {
+    --blist--buttons-indet: var(--blist--indent-thin); }
+    .blist__buttons--tabs .blist__buttons__inner {
+      flex-direction: row; }
+      .blist__buttons--tabs .blist__buttons__inner .blist__button {
+        min-width: 0;
+        flex: 1; }
   .blist__popup__inner {
     padding: 0; } }

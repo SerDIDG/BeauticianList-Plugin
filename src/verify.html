@@ -30,6 +30,12 @@
                             <div class="blist__form__header">
                                 <p>In order to have access to this section you must confirm you hold a valid beauty license issued by the Board of Barbering and Cosmetology.</p>
                                 <p>Verify your license and join Beauty Pro community.</p>
+                                <div class="blist__buttons blist__buttons--tabs pull-center">
+                                    <div class="blist__buttons__inner">
+                                        <a class="blist__button blist__button--border is-large">Individual</a>
+                                        <a class="blist__button blist__button--border blist__button--primary is-large">Salon <sup>(beta)</sup></a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="blist__form__content">
                                 <dl class="blist__field blist__field--vertical">
@@ -49,7 +55,31 @@
                                 </dl>
                                 <dl class="blist__field blist__field--vertical">
                                     <dd>
-                                        <input class="blist__input is-required" type="text" name="state" autocomplete="off" placeholder="State *" title="State">
+                                        <div class="react-autosuggest__container">
+                                            <input class="blist__input is-required" type="text" name="state" autocomplete="off" placeholder="State *" title="State">
+                                            <div role="listbox" class="react-autosuggest__suggestions-container">
+                                                <ul role="listbox" class="react-autosuggest__suggestions-list">
+                                                    <li role="option" class="react-autosuggest__suggestion react-autosuggest__suggestion--first">
+                                                        <div>Alabama</div>
+                                                    </li>
+                                                    <li role="option" class="react-autosuggest__suggestion react-autosuggest__suggestion--highlighted">
+                                                        <div>Alaska</div>
+                                                    </li>
+                                                    <li role="option" class="react-autosuggest__suggestion">
+                                                        <div>Arizona</div>
+                                                    </li>
+                                                    <li role="option" class="react-autosuggest__suggestion">
+                                                        <div>Arkansas</div>
+                                                    </li>
+                                                    <li role="option" class="react-autosuggest__suggestion">
+                                                        <div>Arkansas</div>
+                                                    </li>
+                                                    <li role="option" class="react-autosuggest__suggestion">
+                                                        <div>Arkansas</div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                         <div class="blist__field__hint is-hidden">Sample of valid licenses format in New York: AENS-18-05934, 25AM1350292, AEC-T-18-03251, AEC-T-18-01142-2</div>
                                     </dd>
                                 </dl>
@@ -58,7 +88,7 @@
                                         <input class="blist__input is-required" type="text" name="license" placeholder="License Number *" title="License Number">
                                     </dd>
                                 </dl>
-                                <dl class="blist__field blist__field--vertical is-padded">
+                                <dl class="blist__field blist__field--vertical is-padded is-hidden">
                                     <dt>
                                         <label for="verify[image]">Please upload a copy of your license in order to be verified.</label>
                                     </dt>

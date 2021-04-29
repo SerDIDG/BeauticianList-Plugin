@@ -23,8 +23,23 @@
 
 @media only screen and (max-width: $screen-mobile) {
 	.blist__buttons {
+		$self: &;
+
 		&__inner {
 			flex-direction: column;
+		}
+
+		&--tabs {
+			--blist--buttons-indet: var(--blist--indent-thin);
+
+			#{$self}__inner {
+				flex-direction: row;
+
+				.blist__button {
+					min-width: 0;
+					flex: 1;
+				}
+			}
 		}
 	}
 

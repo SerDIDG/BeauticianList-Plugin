@@ -78,6 +78,10 @@
 	&.is-padded {
 		padding: var(--blist--field--group-padding);
 	}
+
+	&.is-hidden {
+		display: none;
+	}
 }
 
 .blist__field {
@@ -227,8 +231,9 @@
 	height: var(--blist--button-height);
 	display: block;
 	position: relative;
-	padding: calc((var(--blist--button-height) - var(--blist--font--height)) / 2) var(--blist--button-padding);
+	padding: calc((var(--blist--button-height) - var(--blist--font--height) - var(--blist--button-border-size)) / 2) var(--blist--button-padding);
 	background: var(--blist--color-accent);
+	border: var(--blist--button-border-size) solid var(--blist--color-accent);
 	border-radius: var(--blist--border-radius);
 	color: var(--blist--button-color);
 	font-weight: var(--blist--button-weight);
@@ -238,6 +243,13 @@
 	white-space: nowrap;
 	cursor: pointer;
 	transition: all var(--blist--transition-duration) ease-in-out;
+
+	sup {
+		margin: -4px 0 0 2px;
+		position: absolute;
+		font-size: 10px;
+		text-transform: none;
+	}
 
 	&:hover,
 	&:active,
@@ -251,8 +263,20 @@
 		box-shadow: var(--blist--button-active-shadow);
 	}
 
+	&--border {
+		--blist--button-border-size: var(--blist--border--thick-size);
+		background: var(--blist--color-background);
+		color: var(--blist--color-accent);
+
+		&:hover,
+		&:active {
+			background: var(--blist--color-background);
+		}
+	}
+
 	&--primary {
 		background: var(--blist--color-accent);
+		color: var(--blist--button-color);
 
 		&:hover,
 		&:active {
