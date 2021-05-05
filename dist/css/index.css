@@ -131,7 +131,7 @@
 .blist__status--open {
   overflow: hidden; }
 
-.blist__reset--block, .blist__wrapper img, .blist__wrapper dl, .blist__wrapper dt, .blist__wrapper dd, .blist__wrapper ul, .blist__wrapper ol, .blist__wrapper li, .blist__wrapper hr, .blist__wrapper form, .blist__wrapper input, .blist__wrapper select, .blist__wrapper textarea, .blist__wrapper button, .blist__wrapper label, .blist__wrapper h1, .blist__wrapper h2, .blist__wrapper h3, .blist__wrapper h4, .blist__wrapper h5, .blist__wrapper h6, .blist__wrapper p {
+.blist__reset--block, .blist__wrapper img, .blist__wrapper dl, .blist__wrapper dt, .blist__wrapper dd, .blist__wrapper ul, .blist__wrapper ol, .blist__wrapper li, .blist__wrapper hr, .blist__wrapper sub, .blist__wrapper sup, .blist__wrapper form, .blist__wrapper input, .blist__wrapper select, .blist__wrapper textarea, .blist__wrapper button, .blist__wrapper label, .blist__wrapper h1, .blist__wrapper h2, .blist__wrapper h3, .blist__wrapper h4, .blist__wrapper h5, .blist__wrapper h6, .blist__wrapper p {
   width: auto;
   height: auto;
   min-width: 0;
@@ -139,12 +139,17 @@
   max-width: none;
   max-height: none;
   display: block;
+  position: static;
+  top: initial;
+  right: initial;
+  bottom: initial;
+  left: initial;
   padding: 0;
   margin: 0;
   box-shadow: none;
   border: none;
   border-radius: 0; }
-  .blist__reset--block:before, .blist__wrapper img:before, .blist__wrapper dl:before, .blist__wrapper dt:before, .blist__wrapper dd:before, .blist__wrapper ul:before, .blist__wrapper ol:before, .blist__wrapper li:before, .blist__wrapper hr:before, .blist__wrapper form:before, .blist__wrapper input:before, .blist__wrapper select:before, .blist__wrapper textarea:before, .blist__wrapper button:before, .blist__wrapper label:before, .blist__wrapper h1:before, .blist__wrapper h2:before, .blist__wrapper h3:before, .blist__wrapper h4:before, .blist__wrapper h5:before, .blist__wrapper h6:before, .blist__wrapper p:before, .blist__reset--block:after, .blist__wrapper img:after, .blist__wrapper dl:after, .blist__wrapper dt:after, .blist__wrapper dd:after, .blist__wrapper ul:after, .blist__wrapper ol:after, .blist__wrapper li:after, .blist__wrapper hr:after, .blist__wrapper form:after, .blist__wrapper input:after, .blist__wrapper select:after, .blist__wrapper textarea:after, .blist__wrapper button:after, .blist__wrapper label:after, .blist__wrapper h1:after, .blist__wrapper h2:after, .blist__wrapper h3:after, .blist__wrapper h4:after, .blist__wrapper h5:after, .blist__wrapper h6:after, .blist__wrapper p:after {
+  .blist__reset--block:before, .blist__wrapper img:before, .blist__wrapper dl:before, .blist__wrapper dt:before, .blist__wrapper dd:before, .blist__wrapper ul:before, .blist__wrapper ol:before, .blist__wrapper li:before, .blist__wrapper hr:before, .blist__wrapper sub:before, .blist__wrapper sup:before, .blist__wrapper form:before, .blist__wrapper input:before, .blist__wrapper select:before, .blist__wrapper textarea:before, .blist__wrapper button:before, .blist__wrapper label:before, .blist__wrapper h1:before, .blist__wrapper h2:before, .blist__wrapper h3:before, .blist__wrapper h4:before, .blist__wrapper h5:before, .blist__wrapper h6:before, .blist__wrapper p:before, .blist__reset--block:after, .blist__wrapper img:after, .blist__wrapper dl:after, .blist__wrapper dt:after, .blist__wrapper dd:after, .blist__wrapper ul:after, .blist__wrapper ol:after, .blist__wrapper li:after, .blist__wrapper hr:after, .blist__wrapper sub:after, .blist__wrapper sup:after, .blist__wrapper form:after, .blist__wrapper input:after, .blist__wrapper select:after, .blist__wrapper textarea:after, .blist__wrapper button:after, .blist__wrapper label:after, .blist__wrapper h1:after, .blist__wrapper h2:after, .blist__wrapper h3:after, .blist__wrapper h4:after, .blist__wrapper h5:after, .blist__wrapper h6:after, .blist__wrapper p:after {
     all: initial; }
 
 .blist__align--left {
@@ -218,7 +223,7 @@
   text-decoration: none;
   color: var(--blist--color-primary); }
 
-.blist__font--inherit, .blist__wrapper dl, .blist__wrapper dt, .blist__wrapper dd, .blist__wrapper ul, .blist__wrapper ol, .blist__wrapper li, .blist__wrapper label, .blist__wrapper h1, .blist__wrapper h2, .blist__wrapper h3, .blist__wrapper h4, .blist__wrapper h5, .blist__wrapper h6, .blist__wrapper p, .blist__wrapper a, .blist__input::placeholder {
+.blist__font--inherit, .blist__wrapper dl, .blist__wrapper dt, .blist__wrapper dd, .blist__wrapper ul, .blist__wrapper ol, .blist__wrapper li, .blist__wrapper sub, .blist__wrapper sup, .blist__wrapper label, .blist__wrapper h1, .blist__wrapper h2, .blist__wrapper h3, .blist__wrapper h4, .blist__wrapper h5, .blist__wrapper h6, .blist__wrapper p, .blist__wrapper a, .blist__input::placeholder {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
@@ -283,6 +288,8 @@
     border-top: 1px solid var(--blist--border-color); }
     .blist__wrapper hr:last-child {
       margin-bottom: 0; }
+  .blist__wrapper sub, .blist__wrapper sup {
+    display: inline; }
   .blist__wrapper input, .blist__wrapper select, .blist__wrapper textarea, .blist__wrapper button {
     width: 100%;
     outline: none;

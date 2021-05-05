@@ -40,6 +40,12 @@
 		border-top: 1px solid var(--blist--border-color);
 	}
 
+	sub, sup {
+		@extend .blist__reset--block;
+		@extend .blist__font--inherit;
+		display: inline;
+	}
+
 	form {
 		@extend .blist__reset--block;
 	}
