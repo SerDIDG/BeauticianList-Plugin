@@ -1,27 +1,27 @@
 .blist__popup {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	visibility: hidden;
-	overflow-x: hidden;
-	overflow-y: auto;
-	-webkit-overflow-scrolling: touch;
-	transition: all var(--blist--dialog-duration) ease-in-out;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: all var(--blist--dialog-duration) ease-in-out;
 
-	&__inner {
-		min-height: 100%;
-		display: flex;
-		padding: var(--blist--indent-small);
-	}
+  &__inner {
+    min-height: 100%;
+    display: flex;
+    padding: var(--blist--indent-small);
+  }
 
-	&.is-show {
-		visibility: visible;
-		opacity: 1;
+  &.is-show {
+    visibility: visible;
+    opacity: 1;
 
-		.blist__dialog {
-			@extend .blist__dialog.is-show;
-		}
-	}
+    .blist__dialog {
+      @extend .blist__dialog.is-show;
+    }
+  }
 }

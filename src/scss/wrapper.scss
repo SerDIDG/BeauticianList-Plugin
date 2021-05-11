@@ -1,98 +1,98 @@
 .blist__wrapper {
-	@extend .blist__font--initial;
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	z-index: 9999999;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	-webkit-text-size-adjust: 100%;
-	-webkit-font-smoothing: subpixel-antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  @extend .blist__font--initial;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-	& * {
-		box-sizing: border-box;
-	}
+  & * {
+    box-sizing: border-box;
+  }
 
-	img {
-		@extend .blist__reset--block;
-		max-width: 100%;
-		backface-visibility: hidden;
-		transform: translate(0px, 0px);
-	}
+  img {
+    @extend .blist__reset--block;
+    max-width: 100%;
+    backface-visibility: hidden;
+    transform: translate(0px, 0px);
+  }
 
-	dl, dt, dd {
-		@extend .blist__reset--block;
-		@extend .blist__font--inherit;
-	}
+  dl, dt, dd {
+    @extend .blist__reset--block;
+    @extend .blist__font--inherit;
+  }
 
-	ul, ol, li {
-		@extend .blist__reset--block;
-		@extend .blist__font--inherit;
-		list-style: none;
-	}
+  ul, ol, li {
+    @extend .blist__reset--block;
+    @extend .blist__font--inherit;
+    list-style: none;
+  }
 
-	hr {
-		@extend .blist__reset--block;
-		@include box;
-		border-top: 1px solid var(--blist--border-color);
-	}
+  hr {
+    @extend .blist__reset--block;
+    @include box;
+    border-top: 1px solid var(--blist--border-color);
+  }
 
-	sub, sup {
-		@extend .blist__reset--block;
-		@extend .blist__font--inherit;
-		display: inline;
-	}
+  sub, sup {
+    @extend .blist__reset--block;
+    @extend .blist__font--inherit;
+    display: inline;
+  }
 
-	form {
-		@extend .blist__reset--block;
-	}
+  form {
+    @extend .blist__reset--block;
+  }
 
-	input, select, textarea, button {
-		@extend .blist__reset--block;
-		@extend .blist__font--initial;
-		width: 100%;
-		outline: none;
-		background-clip: padding-box;
-	}
+  input, select, textarea, button {
+    @extend .blist__reset--block;
+    @extend .blist__font--initial;
+    width: 100%;
+    outline: none;
+    background-clip: padding-box;
+  }
 
-	label {
-		@extend .blist__reset--block;
-		@extend .blist__font--inherit;
-	}
+  label {
+    @extend .blist__reset--block;
+    @extend .blist__font--inherit;
+  }
 
-	h1, h2, h3, h4, h5, h6, p, dl, ul, ol {
-		@extend .blist__reset--block;
-		@extend .blist__font--inherit;
-		margin: 0;
-		padding: 0;
-		@include box;
-	}
+  h1, h2, h3, h4, h5, h6, p, dl, ul, ol {
+    @extend .blist__reset--block;
+    @extend .blist__font--inherit;
+    margin: 0;
+    padding: 0;
+    @include box;
+  }
 
-	h1 {
-		@extend .blist__font--h1;
-	}
+  h1 {
+    @extend .blist__font--h1;
+  }
 
-	h2 {
-		@extend .blist__font--h2;
-	}
+  h2 {
+    @extend .blist__font--h2;
+  }
 
-	a {
-		@extend .blist__font--inherit;
-		@extend .blist__font--a;
-		text-decoration: none;
-		cursor: pointer;
+  a {
+    @extend .blist__font--inherit;
+    @extend .blist__font--a;
+    text-decoration: none;
+    cursor: pointer;
 
-		&:hover,
-		&:focus,
-		&:active {
-			text-decoration: underline;
-		}
-	}
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+    }
+  }
 
-	b, strong {
-		font-weight: var(--blist--bold--weight);
-	}
+  b, strong {
+    font-weight: var(--blist--bold--weight);
+  }
 }

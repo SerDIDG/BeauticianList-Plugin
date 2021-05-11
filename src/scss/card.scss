@@ -1,115 +1,115 @@
 .blist__cards {
-	@include box;
+  @include box;
 }
 
 .blist__card {
-	$self: &;
-	padding: var(--blist--card-padding);
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	border: 0 solid var(--blist--color-separator);
-	border-top-width: 2px;
-	cursor: pointer;
-	transition: all var(--blist--transition-duration) ease-in-out;
+  $self: &;
+  padding: var(--blist--card-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0 solid var(--blist--color-separator);
+  border-top-width: 2px;
+  cursor: pointer;
+  transition: all var(--blist--transition-duration) ease-in-out;
 
-	&:last-child {
-		border-bottom-width: 2px;
-	}
+  &:last-child {
+    border-bottom-width: 2px;
+  }
 
-	&__radio {
-		width: var(--blist--card--radio-size);
-		height: var(--blist--card--radio-size);
-		display: flex;
-		flex: none;
-		position: relative;
-		margin-left: var(--blist--card-padding);
-		border: 2px solid var(--blist--border-color);
-		border-radius: 100%;
-		transition: all var(--blist--transition-duration) ease-in-out;
+  &__radio {
+    width: var(--blist--card--radio-size);
+    height: var(--blist--card--radio-size);
+    display: flex;
+    flex: none;
+    position: relative;
+    margin-left: var(--blist--card-padding);
+    border: 2px solid var(--blist--border-color);
+    border-radius: 100%;
+    transition: all var(--blist--transition-duration) ease-in-out;
 
-		input {
-			position: absolute;
-			visibility: hidden;
-		}
+    input {
+      position: absolute;
+      visibility: hidden;
+    }
 
-		&:before {
-			width: var(--blist--card--radio-size-inner);
-			height: var(--blist--card--radio-size-inner);
-			display: block;
-			margin: auto;
-			border-radius: 100%;
-			content: '';
-			transition: all var(--blist--transition-duration) ease-in-out;
-		}
+    &:before {
+      width: var(--blist--card--radio-size-inner);
+      height: var(--blist--card--radio-size-inner);
+      display: block;
+      margin: auto;
+      border-radius: 100%;
+      content: '';
+      transition: all var(--blist--transition-duration) ease-in-out;
+    }
 
-		&:hover {
-			border-color: var(--blist--color-accent);
-		}
-	}
+    &:hover {
+      border-color: var(--blist--color-accent);
+    }
+  }
 
-	&__details {
-		vertical-align: top;
-	}
+  &__details {
+    vertical-align: top;
+  }
 
-	&__name {
-		font-weight: var(--blist--bold--weight);
-		text-transform: uppercase;
-	}
+  &__name {
+    font-weight: var(--blist--bold--weight);
+    text-transform: uppercase;
+  }
 
-	&__text,
-	&__separator,
-	&__status {
-		@extend .blist__font--hint;
-		display: inline-block;
-		vertical-align: top;
-	}
+  &__text,
+  &__separator,
+  &__status {
+    @extend .blist__font--hint;
+    display: inline-block;
+    vertical-align: top;
+  }
 
-	&__text {
-		color: var(--blist--color-secondary);
-	}
+  &__text {
+    color: var(--blist--color-secondary);
+  }
 
-	&__separator {
-		margin: 0 var(--blist--indent-quarter);
-		font-weight: var(--blist--bold--weight);
-		color: var(--blist--color-separator);
-	}
+  &__separator {
+    margin: 0 var(--blist--indent-quarter);
+    font-weight: var(--blist--bold--weight);
+    color: var(--blist--color-separator);
+  }
 
-	&__status {
-		font-weight: var(--blist--bold--weight);
+  &__status {
+    font-weight: var(--blist--bold--weight);
 
-		&.active {
-			color: var(--blist--color-success);
-		}
+    &.active {
+      color: var(--blist--color-success);
+    }
 
-		&.pending {
-			color: var(--blist--color-warning);
-		}
+    &.pending {
+      color: var(--blist--color-warning);
+    }
 
-		&.expire,
-		&.expired {
-			color: var(--blist--color-danger);
-		}
-	}
+    &.expire,
+    &.expired {
+      color: var(--blist--color-danger);
+    }
+  }
 
-	&:hover {
-		background: var(--blist--color-accent-bacgkround);
-		transition: all var(--blist--transition-duration-fast) ease-in-out;
-	}
+  &:hover {
+    background: var(--blist--color-accent-bacgkround);
+    transition: all var(--blist--transition-duration-fast) ease-in-out;
+  }
 
-	&.is-hidden {
-		display: none;
-	}
+  &.is-hidden {
+    display: none;
+  }
 
-	&.is-active {
-		background-color: var(--blist--color-accent-bacgkround);
+  &.is-active {
+    background-color: var(--blist--color-accent-bacgkround);
 
-		#{$self}__radio {
-			border-color: var(--blist--color-accent);
+    #{$self}__radio {
+      border-color: var(--blist--color-accent);
 
-			&:before {
-				background-color: var(--blist--color-accent);
-			}
-		}
-	}
+      &:before {
+        background-color: var(--blist--color-accent);
+      }
+    }
+  }
 }

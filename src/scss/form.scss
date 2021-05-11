@@ -1,348 +1,348 @@
 .blist__form {
-	$self: &;
+  $self: &;
 
-	&__header,
-	&__notification,
-	&__content,
-	&__footer {
-		@include box;
-		position: relative;
-	}
+  &__header,
+  &__notification,
+  &__content,
+  &__footer {
+    @include box;
+    position: relative;
+  }
 
-	&__header {
-		text-align: center;
-	}
+  &__header {
+    text-align: center;
+  }
 
-	&__notification {
-		@extend .blist__font--hint;
-		padding: var(--blist--indent-half);
-		border-radius: var(--blist--border-radius);
-		box-shadow: var(--blist--shadow);
+  &__notification {
+    @extend .blist__font--hint;
+    padding: var(--blist--indent-half);
+    border-radius: var(--blist--border-radius);
+    box-shadow: var(--blist--shadow);
 
-		&.is-secondary {
-			background: var(--blist--color-secondary-bacgkround);
-			color: var(--blist--color-secondary);
-		}
+    &.is-secondary {
+      background: var(--blist--color-secondary-bacgkround);
+      color: var(--blist--color-secondary);
+    }
 
-		&.is-danger {
-			background: var(--blist--color-danger-bacgkround);
-			color: var(--blist--color-danger);
-		}
+    &.is-danger {
+      background: var(--blist--color-danger-bacgkround);
+      color: var(--blist--color-danger);
+    }
 
-		&.is-warning {
-			background: var(--blist--color-warning-bacgkround);
-			color: var(--blist--color-warning);
-		}
+    &.is-warning {
+      background: var(--blist--color-warning-bacgkround);
+      color: var(--blist--color-warning);
+    }
 
-		&.is-success {
-			background: var(--blist--color-success-bacgkround);
-			color: var(--blist--color-success);
-		}
+    &.is-success {
+      background: var(--blist--color-success-bacgkround);
+      color: var(--blist--color-success);
+    }
 
-		&.is-hidden {
-			display: none;
-		}
-	}
+    &.is-hidden {
+      display: none;
+    }
+  }
 
-	&--intro {
-		#{$self}__content {
-			text-align: center;
-		}
-	}
+  &--intro {
+    #{$self}__content {
+      text-align: center;
+    }
+  }
 }
 
 /*** FIELD ***/
 
 @mixin field {
-	margin-bottom: var(--blist--field-indent);
+  margin-bottom: var(--blist--field-indent);
 
-	> dt {
-		font-weight: var(--blist--accent--weight);
-	}
+  > dt {
+    font-weight: var(--blist--accent--weight);
+  }
 
-	&--vertical {
-		> dt {
-			margin-bottom: var(--blist--field--title-indent);
-		}
+  &--vertical {
+    > dt {
+      margin-bottom: var(--blist--field--title-indent);
+    }
 
-		> dd {
-			@include box;
-			margin-bottom: var(--blist--field-indent);
-		}
-	}
+    > dd {
+      @include box;
+      margin-bottom: var(--blist--field-indent);
+    }
+  }
 
-	&--group {
-		padding: var(--blist--field--group-padding);
-	}
+  &--group {
+    padding: var(--blist--field--group-padding);
+  }
 
-	&.is-padded {
-		padding: var(--blist--field--group-padding);
-	}
+  &.is-padded {
+    padding: var(--blist--field--group-padding);
+  }
 
-	&.is-hidden {
-		display: none;
-	}
+  &.is-hidden {
+    display: none;
+  }
 }
 
 .blist__field {
-	&.blist__field {
-		@include field;
-	}
+  &.blist__field {
+    @include field;
+  }
 
-	&__hint {
-		@extend .blist__font--error;
-		margin-top: var(--blist--indent-quarter);
-		font-style: italic;
+  &__hint {
+    @extend .blist__font--error;
+    margin-top: var(--blist--indent-quarter);
+    font-style: italic;
 
-		&:before {
-			content: ' - ';
-		}
+    &:before {
+      content: ' - ';
+    }
 
-		&.is-danger {
-			color: var(--blist--color-danger);
-		}
+    &.is-danger {
+      color: var(--blist--color-danger);
+    }
 
-		&.is-warning {
-			color: var(--blist--color-warning);
-		}
+    &.is-warning {
+      color: var(--blist--color-warning);
+    }
 
-		&.is-success {
-			color: var(--blist--color-success);
-		}
+    &.is-success {
+      color: var(--blist--color-success);
+    }
 
-		&.is-hidden {
-			display: none;
-		}
-	}
+    &.is-hidden {
+      display: none;
+    }
+  }
 }
 
 /*** INPUT **/
 
 @mixin input {
-	height: var(--blist--field-height);
-	padding: calc((var(--blist--field-height) - var(--blist--font--height)) / 2) var(--blist--field-padding);
-	background: var(--blist--color-background);
-	border: 1px solid var(--blist--border-color);
-	border-radius: var(--blist--border-radius);
-	transition: all var(--blist--transition-duration) ease-in-out, height none;
+  height: var(--blist--field-height);
+  padding: calc((var(--blist--field-height) - var(--blist--font--height)) / 2) var(--blist--field-padding);
+  background: var(--blist--color-background);
+  border: 1px solid var(--blist--border-color);
+  border-radius: var(--blist--border-radius);
+  transition: all var(--blist--transition-duration) ease-in-out, height none;
 
-	&::placeholder {
-		@extend .blist__font--inherit;
-		color: var(--blist--color-secondary);
-		opacity: 1;
-	}
+  &::placeholder {
+    @extend .blist__font--inherit;
+    color: var(--blist--color-secondary);
+    opacity: 1;
+  }
 
-	&:hover,
-	&:active {
-		background: var(--blist--color-secondary-bacgkround);
-		transition: all var(--blist--transition-duration-fast) ease-in-out, height none;
-	}
+  &:hover,
+  &:active {
+    background: var(--blist--color-secondary-bacgkround);
+    transition: all var(--blist--transition-duration-fast) ease-in-out, height none;
+  }
 
-	&:focus {
-		background: var(--blist--color-secondary-bacgkround);
-		border-color: var(--blist--color-accent);
-		box-shadow: 0 0 1px var(--blist--color-accent);
-		transition: all var(--blist--transition-duration-fast) ease-in-out, height none;
-	}
+  &:focus {
+    background: var(--blist--color-secondary-bacgkround);
+    border-color: var(--blist--color-accent);
+    box-shadow: 0 0 1px var(--blist--color-accent);
+    transition: all var(--blist--transition-duration-fast) ease-in-out, height none;
+  }
 
-	&:disabled {
-		background: var(--blist--color-secondary-disabled);
-		border-color: var(--blist--border-color);
-		box-shadow: none;
-	}
+  &:disabled {
+    background: var(--blist--color-secondary-disabled);
+    border-color: var(--blist--border-color);
+    box-shadow: none;
+  }
 
-	&.is-invalid {
-		border-color: var(--blist--color-danger);
-		color: var(--blist--color-danger);
+  &.is-invalid {
+    border-color: var(--blist--color-danger);
+    color: var(--blist--color-danger);
 
-		&:focus {
-			box-shadow: 0 0 1px var(--blist--color-danger);
-		}
-	}
+    &:focus {
+      box-shadow: 0 0 1px var(--blist--color-danger);
+    }
+  }
 }
 
 @mixin check {
-	width: auto;
-	height: auto;
+  width: auto;
+  height: auto;
 }
 
 @mixin textarea {
-	height: var(--blist--field--textarea-height);
-	min-height: var(--blist--field-height);
-	max-height: var(--blist--field-height-max);
-	overflow: auto;
-	resize: vertical;
+  height: var(--blist--field--textarea-height);
+  min-height: var(--blist--field-height);
+  max-height: var(--blist--field-height-max);
+  overflow: auto;
+  resize: vertical;
 }
 
 @mixin select {
-	height: var(--blist--field--select-height);
-	padding: var(--blist--field--select-padding);
-	overflow-x: hidden;
-	overflow-y: auto;
+  height: var(--blist--field--select-height);
+  padding: var(--blist--field--select-padding);
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .blist__input.blist__input {
-	@include input;
+  @include input;
 
-	&--check {
-		@include check;
-	}
+  &--check {
+    @include check;
+  }
 
-	&--textarea {
-		@include textarea;
-	}
+  &--textarea {
+    @include textarea;
+  }
 
-	&--select {
-		@include select;
-	}
+  &--select {
+    @include select;
+  }
 }
 
 /*** CHECK ***/
 
 .blist__check {
-	$self: &;
-	@include box;
-	margin-bottom: var(--blist--field-indent);
+  $self: &;
+  @include box;
+  margin-bottom: var(--blist--field-indent);
 
-	#{$self}__label {
-		display: flex;
-		align-items: center;
-		cursor: pointer;
-	}
+  #{$self}__label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
 
-	#{$self}__text {
-		@extend .blist__font--hint;
-		font-weight: var(--blist--accent--weight);
-	}
+  #{$self}__text {
+    @extend .blist__font--hint;
+    font-weight: var(--blist--accent--weight);
+  }
 
-	.blist__input {
-		height: var(--blist--hint--height);
-		margin-right: var(--blist--field--check-indent);
-		flex: none;
-		align-self: flex-start;
-	}
+  .blist__input {
+    height: var(--blist--hint--height);
+    margin-right: var(--blist--field--check-indent);
+    flex: none;
+    align-self: flex-start;
+  }
 }
 
 /*** BUTTON ***/
 
 @mixin button {
-	min-width: var(--blist--button-width);
-	max-width: 100%;
-	height: var(--blist--button-height);
-	display: block;
-	position: relative;
-	padding: calc((var(--blist--button-height) - var(--blist--font--height) - var(--blist--button-border-size)) / 2) var(--blist--button-padding);
-	background: var(--blist--color-accent);
-	border: var(--blist--button-border-size) solid var(--blist--color-accent);
-	border-radius: var(--blist--border-radius);
-	color: var(--blist--button-color);
-	font-weight: var(--blist--button-weight);
-	text-align: center;
-	text-transform: uppercase;
-	text-decoration: none;
-	white-space: nowrap;
-	cursor: pointer;
-	transition: all var(--blist--transition-duration) ease-in-out;
+  min-width: var(--blist--button-width);
+  max-width: 100%;
+  height: var(--blist--button-height);
+  display: block;
+  position: relative;
+  padding: calc((var(--blist--button-height) - var(--blist--font--height) - var(--blist--button-border-size)) / 2) var(--blist--button-padding);
+  background: var(--blist--color-accent);
+  border: var(--blist--button-border-size) solid var(--blist--color-accent);
+  border-radius: var(--blist--border-radius);
+  color: var(--blist--button-color);
+  font-weight: var(--blist--button-weight);
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all var(--blist--transition-duration) ease-in-out;
 
-	sup {
-		margin: -4px 0 0 2px;
-		position: absolute;
-		font-size: 10px;
-		text-transform: none;
-	}
+  sup {
+    margin: -4px 0 0 2px;
+    position: absolute;
+    font-size: 10px;
+    text-transform: none;
+  }
 
-	&:hover,
-	&:active,
-	&:focus {
-		background: var(--blist--color-accent);
-		text-decoration: none;
-		transition: all var(--blist--transition-duration-fast) ease-in-out;
-	}
+  &:hover,
+  &:active,
+  &:focus {
+    background: var(--blist--color-accent);
+    text-decoration: none;
+    transition: all var(--blist--transition-duration-fast) ease-in-out;
+  }
 
-	&:active {
-		box-shadow: var(--blist--button-active-shadow);
-	}
+  &:active {
+    box-shadow: var(--blist--button-active-shadow);
+  }
 
-	&--border {
-		--blist--button-border-size: var(--blist--border--thick-size);
-		background: var(--blist--color-background);
-		color: var(--blist--color-accent);
+  &--border {
+    --blist--button-border-size: var(--blist--border--thick-size);
+    background: var(--blist--color-background);
+    color: var(--blist--color-accent);
 
-		&:hover,
-		&:active {
-			background: var(--blist--color-background);
-		}
-	}
+    &:hover,
+    &:active {
+      background: var(--blist--color-background);
+    }
+  }
 
-	&--primary {
-		background: var(--blist--color-accent);
-		color: var(--blist--button-color);
+  &--primary {
+    background: var(--blist--color-accent);
+    color: var(--blist--button-color);
 
-		&:hover,
-		&:active {
-			background: var(--blist--color-accent-hover);
-		}
-	}
+    &:hover,
+    &:active {
+      background: var(--blist--color-accent-hover);
+    }
+  }
 
-	&--secondary {
-		background: var(--blist--color-secondary);
+  &--secondary {
+    background: var(--blist--color-secondary);
 
-		&:hover,
-		&:active {
-			background: var(--blist--color-secondary-hover);
-		}
-	}
+    &:hover,
+    &:active {
+      background: var(--blist--color-secondary-hover);
+    }
+  }
 
-	&--browse {
-		overflow: hidden;
-	}
+  &--browse {
+    overflow: hidden;
+  }
 
-	&.is-large {
-		--blist--button-width: var(--blist--button--large-width);
-		--blist--button-height: var(--blist--button--large-height);
-		--blist--button-padding: var(--blist--button--large-padding);
-	}
+  &.is-large {
+    --blist--button-width: var(--blist--button--large-width);
+    --blist--button-height: var(--blist--button--large-height);
+    --blist--button-padding: var(--blist--button--large-padding);
+  }
 }
 
 .blist__button {
-	$self: &;
+  $self: &;
 
-	&.blist__button {
-		@include button;
-	}
+  &.blist__button {
+    @include button;
+  }
 
-	#{$self}__label {
-		cursor: pointer;
-	}
+  #{$self}__label {
+    cursor: pointer;
+  }
 
-	#{$self}__browse {
-		position: absolute;
-		top: 100%;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		visibility: hidden;
-		pointer-events: none;
-		cursor: pointer;
-	}
+  #{$self}__browse {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    pointer-events: none;
+    cursor: pointer;
+  }
 }
 
 .blist__file {
-	$self: &;
-	@include box;
-	margin-bottom: var(--blist--field--button-indent);
-	display: flex;
-	align-items: center;
+  $self: &;
+  @include box;
+  margin-bottom: var(--blist--field--button-indent);
+  display: flex;
+  align-items: center;
 
-	#{$self}__label {
-		@extend .blist__font--hint;
-		margin: 0 0 0 var(--blist--indent-half);
-		overflow: hidden;
-		white-space: nowrap;
-		text-overflow: ellipsis;
-	}
+  #{$self}__label {
+    @extend .blist__font--hint;
+    margin: 0 0 0 var(--blist--indent-half);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 
-	.blist__button {
-		align-self: flex-start;
-	}
+  .blist__button {
+    align-self: flex-start;
+  }
 }

@@ -1,149 +1,149 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 
 .blist__status {
-	&--open {
-		overflow: hidden;
-	}
+  &--open {
+    overflow: hidden;
+  }
 }
 
 .blist__reset {
-	&--block {
-		width: auto;
-		height: auto;
-		min-width: 0;
-		min-height: 0;
-		max-width: none;
-		max-height: none;
-		display: block;
-		position: static;
-		top: initial;
-		right: initial;
-		bottom: initial;
-		left: initial;
-		padding: 0;
-		margin: 0;
-		box-shadow: none;
-		border: none;
-		border-radius: 0;
+  &--block {
+    width: auto;
+    height: auto;
+    min-width: 0;
+    min-height: 0;
+    max-width: none;
+    max-height: none;
+    display: block;
+    position: static;
+    top: initial;
+    right: initial;
+    bottom: initial;
+    left: initial;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
 
-		&:before,
-		&:after {
-			all: initial;
-		}
-	}
+    &:before,
+    &:after {
+      all: initial;
+    }
+  }
 }
 
 .blist__align {
-	&--left {
-		text-align: left
-	}
+  &--left {
+    text-align: left
+  }
 
-	&--center {
-		text-align: center;
-	}
+  &--center {
+    text-align: center;
+  }
 
-	&--right {
-		text-align: right;
-	}
+  &--right {
+    text-align: right;
+  }
 }
 
 /*** BLOCKS ***/
 
 @mixin border--dashed($theme: dark) {
-	position: absolute;
-	z-index: -1;
-	top: 4px;
-	right: 4px;
-	bottom: 4px;
-	left: 4px;
-	display: block;
-	border-width: 3px;
-	border-style: solid;
-	border-image-width: 16px;
-	border-image-slice: 16;
-	border-image-repeat: round;
-	content: '';
+  position: absolute;
+  z-index: -1;
+  top: 4px;
+  right: 4px;
+  bottom: 4px;
+  left: 4px;
+  display: block;
+  border-width: 3px;
+  border-style: solid;
+  border-image-width: 16px;
+  border-image-slice: 16;
+  border-image-repeat: round;
+  content: '';
 
-	@if $theme == dark {
-		@extend .blist__svg-border--dashed-dark;
-	} @else {
-		@extend .blist__svg-border--dashed-white;
-	}
+  @if $theme == dark {
+    @extend .blist__svg-border--dashed-dark;
+  } @else {
+    @extend .blist__svg-border--dashed-white;
+  }
 }
 
 @mixin box {
-	margin-bottom: var(--blist--indent);
+  margin-bottom: var(--blist--indent);
 
-	&:last-child {
-		margin-bottom: 0;
-	}
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .blist__box {
-	@include box;
+  @include box;
 }
 
 @mixin hr {
-	&--dashed {
-		@extend .blist__svg--separator;
-		margin: var(--blist--indent) auto;
-		height: 3px;
-		background-repeat: repeat-x;
-		border: none;
-		border-radius: 3px;
-		background-position: 50% 0;
-	}
+  &--dashed {
+    @extend .blist__svg--separator;
+    margin: var(--blist--indent) auto;
+    height: 3px;
+    background-repeat: repeat-x;
+    border: none;
+    border-radius: 3px;
+    background-position: 50% 0;
+  }
 
-	&.is-small {
-		width: 56px;
-		background-position: 8px 0;
-	}
+  &.is-small {
+    width: 56px;
+    background-position: 8px 0;
+  }
 
-	&.is-medium {
-		width: 140px;
-		background-position: 8px 0;
-	}
+  &.is-medium {
+    width: 140px;
+    background-position: 8px 0;
+  }
 }
 
 .blist__hr.blist__hr {
-	@include hr;
+  @include hr;
 }
 
 /*** ICONS ***/
 
 .blist__svg {
-	display: block;
-	position: relative;
-	background-color: transparent;
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
+  display: block;
+  position: relative;
+  background-color: transparent;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 
-	&.initial {
-		background-color: transparent;
-		background-position: 50% 50%;
-		background-repeat: no-repeat;
-	}
+  &.initial {
+    background-color: transparent;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
 
-	&.is-cover {
-		background-size: cover;
-	}
+  &.is-cover {
+    background-size: cover;
+  }
 
-	&.is-contain {
-		background-size: contain;
-	}
+  &.is-contain {
+    background-size: contain;
+  }
 
-	&.is-fill {
-		background-size: 100% 100%;
-	}
+  &.is-fill {
+    background-size: 100% 100%;
+  }
 
-	&.has-hover {
-		cursor: pointer;
-		transition: all var(--blist--transition-duration) ease-in-out;
+  &.has-hover {
+    cursor: pointer;
+    transition: all var(--blist--transition-duration) ease-in-out;
 
-		&:hover,
-		&:focus {
-			opacity: 0.8;
-			transition: all var(--blist--transition-duration-fast) ease-in-out;
-		}
-	}
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+      transition: all var(--blist--transition-duration-fast) ease-in-out;
+    }
+  }
 }

@@ -1,86 +1,86 @@
 .blist__dialog {
-	width: 100%;
-	max-width: var(--blist--dialog-width);
-	position: relative;
-	margin: auto;
-	opacity: 0;
-	background: var(--blist--dialog-background);
-	background-clip: padding-box;
-	box-shadow: var(--blist--dialog-shadow);
-	border-radius: var(--blist--dialog-radius);
-	transform: scale(0.95);
-	transition: all var(--blist--dialog-duration) ease-in-out;
+  width: 100%;
+  max-width: var(--blist--dialog-width);
+  position: relative;
+  margin: auto;
+  opacity: 0;
+  background: var(--blist--dialog-background);
+  background-clip: padding-box;
+  box-shadow: var(--blist--dialog-shadow);
+  border-radius: var(--blist--dialog-radius);
+  transform: scale(0.95);
+  transition: all var(--blist--dialog-duration) ease-in-out;
 
-	&__inner {
-		padding: var(--blist--dialog-indent);
+  &__inner {
+    padding: var(--blist--dialog-indent);
 
-		&:before {
-			@include border--dashed(dark);
-		}
-	}
+    &:before {
+      @include border--dashed(dark);
+    }
+  }
 
-	&__close {
-		@extend .blist__svg;
-		@extend .blist__svg--close;
-		width: 24px;
-		height: 24px;
-		position: absolute;
-		z-index: 100;
-		top: 12px;
-		right: 12px;
-	}
+  &__close {
+    @extend .blist__svg;
+    @extend .blist__svg--close;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    z-index: 100;
+    top: 12px;
+    right: 12px;
+  }
 
-	&__header,
-	&__content,
-	&__footer {
-		@include box;
-		position: relative;
-	}
+  &__header,
+  &__content,
+  &__footer {
+    @include box;
+    position: relative;
+  }
 
-	&__header {
-		text-align: center;
+  &__header {
+    text-align: center;
 
-		h1 {
-			margin-bottom: var(--blist--indent-half);
-		}
-	}
+    h1 {
+      margin-bottom: var(--blist--indent-half);
+    }
+  }
 
-	&__logo {
-		img {
-			max-width: 100%;
-			width: 350px;
-			margin: 0 auto;
-		}
-	}
+  &__logo {
+    img {
+      max-width: 100%;
+      width: 350px;
+      margin: 0 auto;
+    }
+  }
 
-	&__links {
-		text-align: center;
+  &__links {
+    text-align: center;
 
-		ul {
-			display: flex;
-			flex-wrap: wrap;
-			flex-direction: column;
-			justify-content: center;
-		}
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-		a {
-			color: var(--blist--color-secondary)
-		}
-	}
+    a {
+      color: var(--blist--color-secondary)
+    }
+  }
 
-	&.is-hide {
-		opacity: 0;
-		transform: scale(0.95);
-	}
+  &.is-hide {
+    opacity: 0;
+    transform: scale(0.95);
+  }
 
-	&.is-show {
-		opacity: 1;
-		transform: scale(1);
-	}
+  &.is-show {
+    opacity: 1;
+    transform: scale(1);
+  }
 
-	.blist__overlay {
-		position: absolute;
-		z-index: 10;
-		border-radius: var(--blist--dialog-radius);
-	}
+  .blist__overlay {
+    position: absolute;
+    z-index: 10;
+    border-radius: var(--blist--dialog-radius);
+  }
 }

@@ -1,51 +1,51 @@
 @media only screen and (min-width: $screen-mobile + 1) {
-	.blist__dialog {
-		&__links {
-			&--horizontal {
-				ul {
-					flex-direction: row;
+  .blist__dialog {
+    &__links {
+      &--horizontal {
+        ul {
+          flex-direction: row;
 
-					li {
-						display: flex;
-						white-space: nowrap;
+          li {
+            display: flex;
+            white-space: nowrap;
 
-						&:not(:last-child):after {
-							display: block;
-							margin: 0 4px;
-							content: '・';
-						}
-					}
-				}
-			}
-		}
-	}
+            &:not(:last-child):after {
+              display: block;
+              margin: 0 4px;
+              content: '・';
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: $screen-mobile) {
-	.blist__buttons {
-		$self: &;
+  .blist__buttons {
+    $self: &;
 
-		&__inner {
-			flex-direction: column;
-		}
+    &__inner {
+      flex-direction: column;
+    }
 
-		&--tabs {
-			--blist--buttons-indet: var(--blist--indent-thin);
+    &--tabs {
+      --blist--buttons-indet: var(--blist--indent-thin);
 
-			#{$self}__inner {
-				flex-direction: row;
+      #{$self}__inner {
+        flex-direction: row;
 
-				.blist__button {
-					min-width: 0;
-					flex: 1;
-				}
-			}
-		}
-	}
+        .blist__button {
+          min-width: 0;
+          flex: 1;
+        }
+      }
+    }
+  }
 
-	.blist__popup {
-		&__inner {
-			padding: 0;
-		}
-	}
+  .blist__popup {
+    &__inner {
+      padding: 0;
+    }
+  }
 }

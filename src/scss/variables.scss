@@ -1,156 +1,156 @@
 $screen-mobile: 640px;
 
 :root {
-	--blist--transition-duration: 250ms;
-	--blist--transition-duration-fast: 150ms;
+  --blist--transition-duration: 250ms;
+  --blist--transition-duration-fast: 150ms;
 
-	--blist--indent-large: 32px;
-	--blist--indent: 24px;
-	--blist--indent-small: 16px;
-	--blist--indent-half: 12px;
-	--blist--indent-third: 8px;
-	--blist--indent-quarter: 6px;
-	--blist--indent-thin: 3px;
+  --blist--indent-large: 32px;
+  --blist--indent: 24px;
+  --blist--indent-small: 16px;
+  --blist--indent-half: 12px;
+  --blist--indent-third: 8px;
+  --blist--indent-quarter: 6px;
+  --blist--indent-thin: 3px;
 
-	--blist--shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-	--blist--shadow-thick: 0 2px 12px rgba(0, 0, 0, 0.2);
+  --blist--shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  --blist--shadow-thick: 0 2px 12px rgba(0, 0, 0, 0.2);
 
-	--blist--duration-long: 500ms;
-	--blist--duration: 250ms;
-	--blist--duration-short: 150ms;
+  --blist--duration-long: 500ms;
+  --blist--duration: 250ms;
+  --blist--duration-short: 150ms;
 
-	// *** COLOR ***
+  // *** COLOR ***
 
-	--blist--color-primary: rgb(0, 0, 0);
-	--blist--color-border: rgb(127, 127, 127);
-	--blist--color-opposite: rgb(255, 255, 255);
-	--blist--color-separator: rgb(229, 229, 229);
+  --blist--color-primary: rgb(0, 0, 0);
+  --blist--color-border: rgb(127, 127, 127);
+  --blist--color-opposite: rgb(255, 255, 255);
+  --blist--color-separator: rgb(229, 229, 229);
 
-	--blist--color-background-value: 255, 255, 255;
-	--blist--color-background: rgb(var(--blist--color-background-value));
-	--blist--color-background-overlay: rgba(var(--blist--color-background-value), 0.7);
+  --blist--color-background-value: 255, 255, 255;
+  --blist--color-background: rgb(var(--blist--color-background-value));
+  --blist--color-background-overlay: rgba(var(--blist--color-background-value), 0.7);
 
-	--blist--color-accent-value: 135, 65, 153;
-	--blist--color-accent: rgb(var(--blist--color-accent-value));
-	--blist--color-accent-hover: rgba(var(--blist--color-accent-value), 0.9);
-	--blist--color-accent-bacgkround: rgba(var(--blist--color-accent-value), 0.05);
-	--blist--color-accent-highlight: rgba(var(--blist--color-accent-value), 0.25);
-	--blist--color-accent-border: rgba(var(--blist--color-accent-value), 0.25);
+  --blist--color-accent-value: 135, 65, 153;
+  --blist--color-accent: rgb(var(--blist--color-accent-value));
+  --blist--color-accent-hover: rgba(var(--blist--color-accent-value), 0.9);
+  --blist--color-accent-bacgkround: rgba(var(--blist--color-accent-value), 0.05);
+  --blist--color-accent-highlight: rgba(var(--blist--color-accent-value), 0.25);
+  --blist--color-accent-border: rgba(var(--blist--color-accent-value), 0.25);
 
-	--blist--color-secondary-value: 108, 117, 125;
-	--blist--color-secondary: rgb(var(--blist--color-secondary-value));
-	--blist--color-secondary-hover: rgba(var(--blist--color-secondary-value), 0.9);
-	--blist--color-secondary-bacgkround: rgba(var(--blist--color-secondary-value), 0.05);
-	--blist--color-secondary-disabled: rgba(var(--blist--color-secondary-value), 0.15);
-	--blist--color-secondary-border: rgba(var(--blist--color-secondary-value), 0.25);
+  --blist--color-secondary-value: 108, 117, 125;
+  --blist--color-secondary: rgb(var(--blist--color-secondary-value));
+  --blist--color-secondary-hover: rgba(var(--blist--color-secondary-value), 0.9);
+  --blist--color-secondary-bacgkround: rgba(var(--blist--color-secondary-value), 0.05);
+  --blist--color-secondary-disabled: rgba(var(--blist--color-secondary-value), 0.15);
+  --blist--color-secondary-border: rgba(var(--blist--color-secondary-value), 0.25);
 
-	--blist--color-danger-value: 212, 53, 53;
-	--blist--color-danger: rgb(var(--blist--color-danger-value));
-	--blist--color-danger-hover: rgba(var(--blist--color-danger-value), 0.9);
-	--blist--color-danger-bacgkround: rgba(var(--blist--color-danger-value), 0.05);
-	--blist--color-danger-border: rgba(var(--blist--color-danger-value), 0.25);
+  --blist--color-danger-value: 212, 53, 53;
+  --blist--color-danger: rgb(var(--blist--color-danger-value));
+  --blist--color-danger-hover: rgba(var(--blist--color-danger-value), 0.9);
+  --blist--color-danger-bacgkround: rgba(var(--blist--color-danger-value), 0.05);
+  --blist--color-danger-border: rgba(var(--blist--color-danger-value), 0.25);
 
-	--blist--color-warning-value: 224, 157, 40;
-	--blist--color-warning: rgb(var(--blist--color-warning-value));
-	--blist--color-warning-bacgkround: rgba(var(--blist--color-warning-value), 0.05);
+  --blist--color-warning-value: 224, 157, 40;
+  --blist--color-warning: rgb(var(--blist--color-warning-value));
+  --blist--color-warning-bacgkround: rgba(var(--blist--color-warning-value), 0.05);
 
-	--blist--color-success-value: 37, 176, 37;
-	--blist--color-success: rgb(var(--blist--color-success-value));
-	--blist--color-success-bacgkround: rgba(var(--blist--color-success-value), 0.05);
+  --blist--color-success-value: 37, 176, 37;
+  --blist--color-success: rgb(var(--blist--color-success-value));
+  --blist--color-success-bacgkround: rgba(var(--blist--color-success-value), 0.05);
 
-	// *** BORDER ***
+  // *** BORDER ***
 
-	--blist--border-color: var(--blist--color-border);
-	--blist--border-radius: 5px;
-	--blist--border--thick-size: 2px;
+  --blist--border-color: var(--blist--color-border);
+  --blist--border-radius: 5px;
+  --blist--border--thick-size: 2px;
 
-	// *** FONT ***
+  // *** FONT ***
 
-	--blist--bold--weight: 600;
-	--blist--accent--weight: 500;
+  --blist--bold--weight: 600;
+  --blist--accent--weight: 500;
 
-	--blist--font--size: 16px;
-	--blist--font--height: 24px;
-	--blist--font--weight: 400;
-	--blist--hint--size: 14px;
-	--blist--hint--height: 18px;
-	--blist--hint--weight: 400;
-	--blist--error--size: 12px;
-	--blist--error--height: 18px;
-	--blist--error--weight: 500;
-	--blist--h1--size: 24px;
-	--blist--h1--height: 32px;
-	--blist--h1--weight: 500;
-	--blist--h2--size: 20px;
-	--blist--h2--height: 28px;
-	--blist--h2--weight: 500;
-	--blist--a--weight: 500;
-	--blist--a--color: var(--blist--color-accent);
+  --blist--font--size: 16px;
+  --blist--font--height: 24px;
+  --blist--font--weight: 400;
+  --blist--hint--size: 14px;
+  --blist--hint--height: 18px;
+  --blist--hint--weight: 400;
+  --blist--error--size: 12px;
+  --blist--error--height: 18px;
+  --blist--error--weight: 500;
+  --blist--h1--size: 24px;
+  --blist--h1--height: 32px;
+  --blist--h1--weight: 500;
+  --blist--h2--size: 20px;
+  --blist--h2--height: 28px;
+  --blist--h2--weight: 500;
+  --blist--a--weight: 500;
+  --blist--a--color: var(--blist--color-accent);
 
-	// *** BUTTON ***
+  // *** BUTTON ***
 
-	--blist--button-width: 128px;
-	--blist--button-height: var(--blist--field-height);
-	--blist--button-padding: var(--blist--indent-small);
-	--blist--button-border-size: 0px;
-	--blist--button-weight: 500;
-	--blist--button-color: var(--blist--color-opposite);
-	--blist--button-active-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.4);
-	--blist--button--large-width: 256px;
-	--blist--button--large-height: var(--blist--field--large-height);
-	--blist--button--large-padding: var(--blist--indent-large);
+  --blist--button-width: 128px;
+  --blist--button-height: var(--blist--field-height);
+  --blist--button-padding: var(--blist--indent-small);
+  --blist--button-border-size: 0px;
+  --blist--button-weight: 500;
+  --blist--button-color: var(--blist--color-opposite);
+  --blist--button-active-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.4);
+  --blist--button--large-width: 256px;
+  --blist--button--large-height: var(--blist--field--large-height);
+  --blist--button--large-padding: var(--blist--indent-large);
 
-	--blist--buttons-indet: var(--blist--indent-quarter);
+  --blist--buttons-indet: var(--blist--indent-quarter);
 
-	// *** FIELD ***
+  // *** FIELD ***
 
-	--blist--field-height: 40px;
-	--blist--field-height-max: 500px;
-	--blist--field-padding: var(--blist--indent-third);
-	--blist--field-indent: var(--blist--indent-small);
-	--blist--field--title-indent: calc(var(--blist--indent-third) / 2);
-	--blist--field--large-height: 50px;
-	--blist--field--small-height: 32px;
-	--blist--field--textarea-height: 100px;
-	--blist--field--select-height: 128px;
-	--blist--field--select-padding: calc(var(--blist--indent-third) / 2);
-	--blist--field--check-indent: var(--blist--indent-third);
-	--blist--field--button-indent: var(--blist--indent-third);
-	--blist--field--group-padding: var(--blist--indent-third) 0;
+  --blist--field-height: 40px;
+  --blist--field-height-max: 500px;
+  --blist--field-padding: var(--blist--indent-third);
+  --blist--field-indent: var(--blist--indent-small);
+  --blist--field--title-indent: calc(var(--blist--indent-third) / 2);
+  --blist--field--large-height: 50px;
+  --blist--field--small-height: 32px;
+  --blist--field--textarea-height: 100px;
+  --blist--field--select-height: 128px;
+  --blist--field--select-padding: calc(var(--blist--indent-third) / 2);
+  --blist--field--check-indent: var(--blist--indent-third);
+  --blist--field--button-indent: var(--blist--indent-third);
+  --blist--field--group-padding: var(--blist--indent-third) 0;
 
-	// *** CARD ***
+  // *** CARD ***
 
-	--blist--card-padding: var(--blist--indent-half);
-	--blist--card--radio-size: var(--blist--indent-large);
-	--blist--card--radio-size-inner: var(--blist--indent-half);
+  --blist--card-padding: var(--blist--indent-half);
+  --blist--card--radio-size: var(--blist--indent-large);
+  --blist--card--radio-size-inner: var(--blist--indent-half);
 
-	// *** OVERLAY ***
+  // *** OVERLAY ***
 
-	--blist--overlay-duration: var(--blist--duration-long);
-	--blist--overlay-color: var(--blist--color-background-overlay);
-	--blist--overlay--spinner-size: var(--blist--field--small-height);
+  --blist--overlay-duration: var(--blist--duration-long);
+  --blist--overlay-color: var(--blist--color-background-overlay);
+  --blist--overlay--spinner-size: var(--blist--field--small-height);
 
-	// *** DIALOG ***
+  // *** DIALOG ***
 
-	--blist--dialog-duration: var(--blist--duration-long);
-	--blist--dialog-width: 720px;
-	--blist--dialog-indent: var(--blist--indent-large);
-	--blist--dialog-radius: var(--blist--border-radius);
-	--blist--dialog-background: var(--blist--color-background);
-	--blist--dialog-shadow: var(--blist--shadow-thick);
+  --blist--dialog-duration: var(--blist--duration-long);
+  --blist--dialog-width: 720px;
+  --blist--dialog-indent: var(--blist--indent-large);
+  --blist--dialog-radius: var(--blist--border-radius);
+  --blist--dialog-background: var(--blist--color-background);
+  --blist--dialog-shadow: var(--blist--shadow-thick);
 
-	// *** TOOLTIP ***
+  // *** TOOLTIP ***
 
-	--blist--tooltip-duration: var(--blist--duration-short);
-	--blist--tooltip-indent: var(--blist--indent-thin);
-	--blist--tooltip-radius: var(--blist--border-radius);
-	--blist--tooltip-background: var(--blist--color-background);
-	--blist--tooltip-shadow: var(--blist--shadow-thick);
-	--blist--tooltip-max-items: 5;
-	--blist--tooltip--item-height: var(--blist--field--small-height);
-	--blist--tooltip--item-hover-background: var(--blist--color-accent-highlight);
-	--blist--tooltip--item-highlighted-background: var(--blist--color-accent);
-	--blist--tooltip--item-highlighted-color: var(--blist--color-opposite);
-	--blist--tooltip--item-active-background: var(--blist--color-accent-hover);
-	--blist--tooltip--item-active-color: var(--blist--color-opposite);
+  --blist--tooltip-duration: var(--blist--duration-short);
+  --blist--tooltip-indent: var(--blist--indent-thin);
+  --blist--tooltip-radius: var(--blist--border-radius);
+  --blist--tooltip-background: var(--blist--color-background);
+  --blist--tooltip-shadow: var(--blist--shadow-thick);
+  --blist--tooltip-max-items: 5;
+  --blist--tooltip--item-height: var(--blist--field--small-height);
+  --blist--tooltip--item-hover-background: var(--blist--color-accent-highlight);
+  --blist--tooltip--item-highlighted-background: var(--blist--color-accent);
+  --blist--tooltip--item-highlighted-color: var(--blist--color-opposite);
+  --blist--tooltip--item-active-background: var(--blist--color-accent-hover);
+  --blist--tooltip--item-active-color: var(--blist--color-opposite);
 }

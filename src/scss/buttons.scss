@@ -1,49 +1,49 @@
 .blist__buttons {
-	$self: &;
-	@include box;
+  $self: &;
+  @include box;
 
-	&__inner {
-		display: flex;
-		flex-wrap: wrap;
-		margin: calc(-1 * var(--blist--buttons-indet));
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc(-1 * var(--blist--buttons-indet));
 
-		.blist__button {
-			margin: var(--blist--buttons-indet);
-			flex: 1;
-		}
-	}
+    .blist__button {
+      margin: var(--blist--buttons-indet);
+      flex: 1;
+    }
+  }
 
-	&.pull-center {
-		#{$self}__inner {
-			justify-content: center;
-		}
-	}
+  &.pull-center {
+    #{$self}__inner {
+      justify-content: center;
+    }
+  }
 
-	&--tabs {
-		border-bottom: var(--blist--border--thick-size) solid var(--blist--color-accent);
+  &--tabs {
+    border-bottom: var(--blist--border--thick-size) solid var(--blist--color-accent);
 
-		#{$self}__inner {
-			flex-wrap: nowrap;
-			margin-top: 0;
-			margin-bottom: calc(-1 * var(--blist--border--thick-size));
+    #{$self}__inner {
+      flex-wrap: nowrap;
+      margin-top: 0;
+      margin-bottom: calc(-1 * var(--blist--border--thick-size));
 
-			.blist__button {
-				min-width: 200px;
-				margin-top: 0;
-				margin-bottom: 0;
-				flex: none;
-				border-bottom-right-radius: 0;
-				border-bottom-left-radius: 0;
-				text-transform: none;
+      .blist__button {
+        min-width: 200px;
+        margin-top: 0;
+        margin-bottom: 0;
+        flex: none;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        text-transform: none;
 
-				&--border {
-					border-bottom-color: var(--blist--color-background);
-				}
+        &--border {
+          border-bottom-color: var(--blist--color-background);
+        }
 
-				&--primary {
-					border-bottom-color: var(--blist--color-accent);
-				}
-			}
-		}
-	}
+        &--primary {
+          border-bottom-color: var(--blist--color-accent);
+        }
+      }
+    }
+  }
 }
