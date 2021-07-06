@@ -21,10 +21,12 @@ const paths = {
 			'src/scss/wrapper.scss',
 			'src/scss/**/*.scss',
 			'!src/scss/adaptive.scss',
+			'!src/scss/reset.scss',
 			'src/scss/adaptive.scss',
 		],
 		dest: 'dist/css/',
 		srcTemp: [
+			'src/scss/reset.scss',
 			'temp/css/**/*.{css,scss}'
 		],
 		destTemp: 'temp/css/',

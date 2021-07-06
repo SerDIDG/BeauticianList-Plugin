@@ -2,10 +2,6 @@
 
 /*** WRAPPER ***/
 
-.blist__wrapper * {
-  all: revert;
-}
-
 .blist__status {
   &--open {
     overflow: hidden;
