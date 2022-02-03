@@ -31,7 +31,8 @@
     }
 
     &.is-dangerous {
-      border: 2px solid var(--blist--color-danger-border);
+      border: var(--blist--border--thick-size) solid var(--blist--color-danger-border);
+      box-shadow: var(--blist--color-danger-shadow) ;
     }
 
     &.is-warning {

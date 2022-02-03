@@ -25,8 +25,12 @@
   --blist--indent-third: 8px;
   --blist--indent-quarter: 6px;
   --blist--indent-thin: 3px;
-  --blist--shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-  --blist--shadow-thick: 0 2px 12px rgba(0, 0, 0, 0.2);
+  --blist--shadow-value: 0 1px 2px;
+  --blist--shadow: var(--blist--shadow-value) rgba(0, 0, 0, 0.15);
+  --blist--shadow-thick-value: 0 2px 12px;
+  --blist--shadow-thick: var(--blist--shadow-thick-value) rgba(0, 0, 0, 0.2);
+  --blist--shadow-thick-down-value: 0 4px 8px;
+  --blist--shadow-thick-down: var(--blist--shadow-thick-down-value) rgba(0, 0, 0, 0.2);
   --blist--duration-long: 500ms;
   --blist--duration: 250ms;
   --blist--duration-short: 150ms;
@@ -54,6 +58,7 @@
   --blist--color-danger-hover: rgba(var(--blist--color-danger-value), 0.9);
   --blist--color-danger-bacgkround: rgba(var(--blist--color-danger-value), 0.05);
   --blist--color-danger-border: rgba(var(--blist--color-danger-value), 0.25);
+  --blist--color-danger-shadow: var(--blist--shadow-thick-down-value) var(--blist--color-danger-border);
   --blist--color-warning-value: 224, 157, 40;
   --blist--color-warning: rgb(var(--blist--color-warning-value));
   --blist--color-warning-bacgkround: rgba(var(--blist--color-warning-value), 0.05);
@@ -507,7 +512,8 @@
     background: var(--blist--color-danger-bacgkround);
     color: var(--blist--color-danger); }
   .blist__form__notification.is-dangerous {
-    border: 2px solid var(--blist--color-danger-border); }
+    border: var(--blist--border--thick-size) solid var(--blist--color-danger-border);
+    box-shadow: var(--blist--color-danger-shadow); }
   .blist__form__notification.is-warning {
     background: var(--blist--color-warning-bacgkround);
     color: var(--blist--color-warning); }
