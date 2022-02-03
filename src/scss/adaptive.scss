@@ -10,8 +10,10 @@
             white-space: nowrap;
 
             &:not(:last-child):after {
-              display: block;
+              display: flex;
+              align-items: center;
               margin: 0 4px;
+              color: inherit;
               content: '・';
             }
           }

@@ -63,8 +63,12 @@
       justify-content: center;
     }
 
+    li {
+      color: var(--blist--color-secondary);
+    }
+
     a {
-      color: var(--blist--color-secondary)
+      color: var(--blist--color-secondary);
     }
   }
 

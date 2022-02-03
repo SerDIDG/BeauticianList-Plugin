@@ -24,9 +24,14 @@
       color: var(--blist--color-secondary);
     }
 
-    &.is-danger {
+    &.is-danger,
+    &.is-dangerous {
       background: var(--blist--color-danger-bacgkround);
       color: var(--blist--color-danger);
+    }
+
+    &.is-dangerous {
+      border: 2px solid var(--blist--color-danger-border);
     }
 
     &.is-warning {
