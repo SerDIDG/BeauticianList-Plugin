@@ -12,10 +12,10 @@
 
   <div class="blist__overlay is-show"></div>
 
-  <div class="blist__popup is-show">
+  <div class="blist__popup is-show" role="dialog">
     <div class="blist__popup__inner">
       <div class="blist__dialog">
-        <div class="blist__dialog__close has-hover" title="Close"></div>
+        <div class="blist__dialog__close has-hover" title="Close" role="button" tabindex="0"></div>
 
         <div class="blist__dialog__inner">
           <div class="blist__dialog__header">
@@ -28,30 +28,44 @@
           <div class="blist__dialog__content">
             <form class="blist__form blist__form--verify">
               <div class="blist__form__header">
-                <p>In order to have access to this section you must confirm you hold a valid beauty license issued by the Board of Barbering and Cosmetology.</p>
-                <p>Verify your license and join Beauty Pro community.</p>
+                <p>Create your digital identity within the Beautician List professional beauty network. Access exclusive offers and discounts using your Blist credentials during license verifications with our brand partners.<br><a target="blank" href="https://beauticianlist.com/about">Learn more</a></p>
                 <div class="blist__buttons blist__buttons--tabs pull-center">
                   <div class="blist__buttons__inner">
                     <a class="blist__button blist__button--border is-large">Individual</a>
-                    <a class="blist__button blist__button--border blist__button--primary is-large">Salon
-                      <sup>(beta)</sup></a>
+                    <a class="blist__button blist__button--border blist__button--primary is-large">Salon</a>
                   </div>
                 </div>
               </div>
               <div class="blist__form__content">
-                <dl class="blist__field blist__field--vertical">
-                  <dd>
-                    <input class="blist__input" name="firstname" placeholder="First name" title="First name" type="text">
-                  </dd>
-                </dl>
-                <dl class="blist__field blist__field--vertical">
-                  <dd>
-                    <input class="blist__input is-required" name="lastname" placeholder="Last name *" title="Last name" type="text">
-                  </dd>
-                </dl>
+                <div class="blist__grid blist__grid--cols-2">
+                  <div class="blist__grid__item">
+                    <dl class="blist__field blist__field--vertical">
+                      <dd>
+                        <input class="blist__input" name="firstname" placeholder="First name" title="First name" type="text">
+                      </dd>
+                    </dl>
+                  </div>
+                  <div class="blist__grid__item">
+                    <dl class="blist__field blist__field--vertical">
+                      <dd>
+                        <input class="blist__input is-required" name="lastname" placeholder="Last name *" title="Last name" type="text">
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
                 <dl class="blist__field blist__field--vertical">
                   <dd>
                     <input class="blist__input is-required" name="email" placeholder="Email *" title="Email" type="text">
+                  </dd>
+                </dl>
+                <dl class="blist__field blist__field--vertical">
+                  <dd>
+                    <select class="blist__input blist__input--select is-required" name="country" title="Country">
+                      <option disabled>Country *</option>
+                      <option value="usa" selected>United States</option>
+                      <option value="canada">Canada</option>
+                      <option value="other">Other</option>
+                    </select>
                   </dd>
                 </dl>
                 <dl class="blist__field blist__field--vertical">
@@ -119,13 +133,13 @@
             <div class="blist__dialog__links blist__dialog__links--vertical">
               <ul>
                 <li>
-                  <a>Already have a profile on Beautician List? <strong>Login Here</strong></a>
+                  <a role="button" tabindex="0">Already have a profile on Beautician List? <strong>Login Here</strong></a>
                 </li>
                 <li>
-                  <a>International customer? <strong>Click Here</strong></a>
+                  <a role="button" tabindex="0">International customer? <strong>Click Here</strong></a>
                 </li>
                 <li>
-                  <a>Report a problem</a>
+                  <a role="button" tabindex="0">Report a problem</a>
                 </li>
               </ul>
             </div>

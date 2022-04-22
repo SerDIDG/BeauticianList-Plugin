@@ -12,10 +12,10 @@
 
   <div class="blist__overlay is-show"></div>
 
-  <div class="blist__popup is-show">
+  <div class="blist__popup is-show" role="dialog">
     <div class="blist__popup__inner">
       <div class="blist__dialog">
-        <div class="blist__dialog__close has-hover" title="Close"></div>
+        <div class="blist__dialog__close has-hover" title="Close" role="button" tabindex="0"></div>
 
         <div class="blist__dialog__inner">
           <div class="blist__dialog__header">
@@ -32,48 +32,62 @@
               </div>
               <div class="blist__form__content">
                 <dl class="blist__field blist__field--vertical">
+                  <dt>
+                    <label for="registration[license]">Confirm your license <span class="required">*</span></label>
+                  </dt>
                   <dd>
-                    <input class="blist__input" disabled name="firstname" placeholder="First name" title="First name" type="text">
-                  </dd>
-                </dl>
-                <dl class="blist__field blist__field--vertical">
-                  <dd>
-                    <input class="blist__input is-required" disabled name="lastname" placeholder="Last name *" title="Last name" type="text">
-                  </dd>
-                </dl>
-                <dl class="blist__field blist__field--vertical">
-                  <dd>
-                    <input class="blist__input is-required" disabled name="email" placeholder="Email *" title="Email" type="text">
-                  </dd>
-                </dl>
-                <dl class="blist__field blist__field--vertical">
-                  <dd>
-                    <input autocomplete="off" class="blist__input is-required" disabled name="state" placeholder="State *" title="State" type="text">
-                  </dd>
-                </dl>
-                <dl class="blist__field blist__field--vertical">
-                  <dd>
-                    <input class="blist__input is-required" disabled name="license" placeholder="License Number *" title="License Number" type="text">
-                  </dd>
-                </dl>
-                <dl class="blist__field blist__field--vertical">
-                  <dd>
-                    <input class="blist__input" name="tel" placeholder="Mobile" title="Mobile" type="tel">
-                  </dd>
-                </dl>
-                <dl class="blist__field blist__field--vertical">
-                  <dd>
-                    <input class="blist__input is-required" name="password" placeholder="Password *" title="Password" type="password">
-                  </dd>
-                </dl>
-                <dl class="blist__field blist__field--vertical">
-                  <dd>
-                    <input class="blist__input" name="address" placeholder="Working address" title="Working address" type="text">
+                    <div class="blist__cards" id="registration[license]" role="listbox">
+                      <div class="blist__card is-active" role="option" aria-selected="true" tabindex="0">
+                        <div class="blist__card__radio">
+                          <input type="radio">
+                        </div>
+                        <div class="blist__card__details">
+                          <div class="blist__card__name">DARYA MININA</div>
+                          <div class="blist__card__text">AENS-14-04346</div>
+                          <div class="blist__card__separator">/</div>
+                          <div class="blist__card__text">Nail Specialty</div>
+                          <div class="blist__card__separator">/</div>
+                          <div class="blist__card__text">07-08-2022</div>
+                          <div class="blist__card__separator">/</div>
+                          <div class="blist__card__status active">Active</div>
+                        </div>
+                      </div>
+                      <div class="blist__card" role="option" aria-selected="false" tabindex="0">
+                        <div class="blist__card__radio">
+                          <input type="radio">
+                        </div>
+                        <div class="blist__card__details">
+                          <div class="blist__card__name">DARYA MININA</div>
+                          <div class="blist__card__text">AENS-14-04346</div>
+                          <div class="blist__card__separator">/</div>
+                          <div class="blist__card__text">Nail Specialty</div>
+                          <div class="blist__card__separator">/</div>
+                          <div class="blist__card__text">07-08-2022</div>
+                          <div class="blist__card__separator">/</div>
+                          <div class="blist__card__status expired">Expired</div>
+                        </div>
+                      </div>
+                      <div class="blist__card" role="option" aria-selected="false" tabindex="0">
+                        <div class="blist__card__radio">
+                          <input type="radio">
+                        </div>
+                        <div class="blist__card__details">
+                          <div class="blist__card__name">DARYA MININA</div>
+                          <div class="blist__card__text">AENS-14-04346</div>
+                          <div class="blist__card__separator">/</div>
+                          <div class="blist__card__text">Nail Specialty</div>
+                          <div class="blist__card__separator">/</div>
+                          <div class="blist__card__text">07-08-2022</div>
+                          <div class="blist__card__separator">/</div>
+                          <div class="blist__card__status pending">Pending</div>
+                        </div>
+                      </div>
+                    </div>
                   </dd>
                 </dl>
                 <dl class="blist__field blist__field--vertical">
                   <dt>
-                    <label for="registration[speciality]">Choose your Speciality <span class="required">*</span></label>
+                    <label for="registration[speciality]">Choose your speciality <span class="required">*</span></label>
                   </dt>
                   <dd>
                     <select class="blist__input blist__input--select is-required" id="registration[speciality]" multiple name="speciality">
@@ -92,21 +106,10 @@
                 </dl>
                 <dl class="blist__field blist__field--vertical blist__field--group">
                   <dd>
-                    <div class="blist__check">
-                      <label class="blist__check__label" for="registration[subscribe]">
-                        <input class="blist__input blist__input--check" id="registration[subscribe]" type="checkbox" value="Yes">
-                        <span class="blist__check__text">Subscribe to email updates</span> </label>
-                    </div>
-                    <div class="blist__check">
-                      <label class="blist__check__label" for="registration[third-party]">
-                        <input class="blist__input blist__input--check" id="registration[third-party]" type="checkbox" value="Yes">
-                        <span class="blist__check__text">Opt in to our third party list to receive relevant offers from our sponsors and partners</span>
-                      </label>
-                    </div>
                     <div class="blist__check is-required">
                       <label class="blist__check__label" for="registration[agree]">
                         <input class="blist__input blist__input--check" id="registration[agree]" type="checkbox" value="Yes">
-                        <span class="blist__check__text">I have read and understand the <a href="https://beauticianlist.com/pages/disclaimer-licensedbeautician" target="_blank">disclaimer</a> *</span>
+                        <span class="blist__check__text">By ticking this box I agree that I have read the <a href="https://beauticianlist.com/pages/disclaimer-licensedbeautician" target="_blank">disclaimer</a>. I consent to receive further electronic communication from BeauticianList and be onboarded to its platform. *</span>
                       </label>
                     </div>
                   </dd>
@@ -123,13 +126,13 @@
             <div class="blist__dialog__links blist__dialog__links--vertical">
               <ul>
                 <li>
-                  <a>Already have a profile on Beautician List? <strong>Login Here</strong></a>
+                  <a role="button" tabindex="0">Already have a profile on Beautician List? <strong>Login Here</strong></a>
                 </li>
                 <li>
-                  <a>International customer? <strong>Click Here</strong></a>
+                  <a role="button" tabindex="0">International customer? <strong>Click Here</strong></a>
                 </li>
                 <li>
-                  <a>Report a problem</a>
+                  <a role="button" tabindex="0">Report a problem</a>
                 </li>
               </ul>
             </div>

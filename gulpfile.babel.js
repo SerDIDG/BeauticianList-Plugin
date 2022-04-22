@@ -18,6 +18,7 @@ const paths = {
 			'src/scss/variables.scss',
 			'src/scss/common.scss',
 			'src/scss/font.scss',
+			'src/scss/form.scss',
 			'src/scss/wrapper.scss',
 			'src/scss/**/*.scss',
 			'!src/scss/adaptive.scss',
@@ -101,9 +102,12 @@ export function content() {
 /*** WATCHERS ***/
 
 export function watch() {
-	gulp.watch(paths.content.src, content);
-	gulp.watch(paths.images.svg, styles);
-	gulp.watch(paths.styles.src, styles);
+	return new Promise(function(resolve, reject) {
+		gulp.watch(paths.content.src, content);
+		gulp.watch(paths.images.svg, styles);
+		gulp.watch(paths.styles.src, styles);
+		resolve();
+	});
 }
 
 /*** BUILD ***/

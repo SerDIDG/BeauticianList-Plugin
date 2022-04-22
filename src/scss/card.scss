@@ -1,5 +1,9 @@
 .blist__cards {
   @include box;
+  @include input;
+  height: auto;
+  padding: 0;
+  overflow: hidden;
 }
 
 .blist__card {
@@ -9,11 +13,10 @@
   justify-content: space-between;
   align-items: center;
   border: 0 solid var(--blist--color-separator);
-  border-top-width: 2px;
   cursor: pointer;
   transition: all var(--blist--transition-duration) ease-in-out;
 
-  &:last-child {
+  &:not(:last-child) {
     border-bottom-width: 2px;
   }
 
@@ -23,7 +26,7 @@
     display: flex;
     flex: none;
     position: relative;
-    margin-left: var(--blist--card-padding);
+    margin-right: var(--blist--card-padding);
     border: 2px solid var(--blist--border-color);
     border-radius: 100%;
     transition: all var(--blist--transition-duration) ease-in-out;
@@ -49,6 +52,7 @@
   }
 
   &__details {
+    flex: auto;
     vertical-align: top;
   }
 
@@ -92,7 +96,8 @@
     }
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: var(--blist--color-accent-bacgkround);
     transition: all var(--blist--transition-duration-fast) ease-in-out;
   }

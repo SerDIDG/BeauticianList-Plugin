@@ -57,6 +57,38 @@
   }
 }
 
+/*** COLUMNS ***/
+
+@mixin grid {
+  margin-bottom: var(--blist--field-indent);
+  grid-gap: var(--blist--field-indent);
+  display: grid;
+
+  &--group {
+    padding: var(--blist--field--group-padding);
+  }
+
+  &--cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &.is-padded {
+    padding: var(--blist--field--group-padding);
+  }
+
+  &.is-hidden {
+    display: none;
+  }
+}
+
+.blist__grid {
+  $self: &;
+
+  &.blist__grid {
+    @include grid;
+  }
+}
+
 /*** FIELD ***/
 
 @mixin field {
@@ -181,10 +213,24 @@
 }
 
 @mixin select {
-  height: var(--blist--field--select-height);
-  padding: var(--blist--field--select-padding);
-  overflow-x: hidden;
-  overflow-y: auto;
+  &[multiple] {
+    height: var(--blist--field--select-height);
+    padding: var(--blist--field--select-padding);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    &:not([multiple]) {
+      option {
+        color: var(--blist--color-opposite);
+
+        &[disabled] {
+          color: var(--blist--color-secondary);
+        }
+      }
+    }
+  }
 }
 
 .blist__input.blist__input {
@@ -258,8 +304,8 @@
   }
 
   &:hover,
-  &:active,
-  &:focus {
+  &:focus,
+  &:active {
     background: var(--blist--color-accent);
     text-decoration: none;
     transition: all var(--blist--transition-duration-fast) ease-in-out;
@@ -275,6 +321,7 @@
     color: var(--blist--color-accent);
 
     &:hover,
+    &:focus,
     &:active {
       background: var(--blist--color-background);
     }
@@ -285,6 +332,7 @@
     color: var(--blist--button-color);
 
     &:hover,
+    &:focus,
     &:active {
       background: var(--blist--color-accent-hover);
     }
@@ -294,6 +342,7 @@
     background: var(--blist--color-secondary);
 
     &:hover,
+    &:focus,
     &:active {
       background: var(--blist--color-secondary-hover);
     }
