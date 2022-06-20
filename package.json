@@ -1,8 +1,9 @@
 {
   "name": "beauticianlist_plugin",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "BeauticianList Plugin assets.",
   "main": "index.html",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp",
@@ -16,7 +17,7 @@
     "assets"
   ],
   "author": "Serhio Magpie",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/SerDIDG/BeauticianList-Plugin/issues"
   },

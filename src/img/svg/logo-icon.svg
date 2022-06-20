@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   viewBox="0 0 200 230"
+   height="225"
+   width="200"
+   xml:space="preserve"
+   id="svg2"
+   version="1.1"><metadata
+     id="metadata8"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+     id="defs6" /><g
+     transform="matrix(1.3333333,0,0,-1.3333333,0,224.69333)"
+     id="g10"><g
+       transform="scale(0.1)"
+       id="g12"><path
+         id="path14"
+         style="fill:#eb048d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="M 711.227,538.559 H 78.5977 V 195.191 l -0.0274,0.059 c 0,0 0.0274,-0.66 0.0274,-1.078 V 166.52 C 77.0039,115.871 65.6094,14.6602 0.558594,0.890625 L 0,0 c 0,0 43.7891,6.21094 110.699,8.85938 h 600.528 c 453.683,0 758.503,178.08962 758.503,545.99962 v 11.172 c 0,97.828 -22.77,182.852 -68.22,253.985 C 1287.43,630.91 1037.92,538.559 711.227,538.559" /><path
+         id="path16"
+         style="fill:#56c2f0;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="m 1469.73,1095.72 c 0,315.92 -252.89,511.17 -706.57,511.17 H 229.238 c -52.422,2.41 -145.4919,15.45 -158.6833,77.8 l -0.8867,0.55 c 0,0 6.3515,-44.79 8.9297,-113 V 1077.32 H 763.16 c 323.7,-9.3 537.16,-98.84 638.35,-257.304 44.32,73.449 68.22,161.574 68.22,264.534 v 11.17" /><path
+         id="path18"
+         style="fill:#812f9b;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="m 1401.51,819.945 v 0.071 C 1300.32,978.48 1086.86,1068.02 763.16,1077.32 H 78.5977 v -0.04 L 349.242,819.945 H 1401.51" /><path
+         id="path20"
+         style="fill:#642893;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="M 349.242,820.016 78.5977,538.559 H 711.227 c 326.693,0 576.203,92.351 690.283,281.457 H 349.242" /></g></g></svg>
